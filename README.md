@@ -10,3 +10,5 @@ This discord bot comes with a discord.js library
 ```npm install mathjs```
 
 ```$ npm install got```
+
+```npm install distube```
