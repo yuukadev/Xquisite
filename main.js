@@ -41,14 +41,23 @@ client.on("message", async (message) => {
     const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
     const command = args.shift();
     const string = args.join(" ");
-    ``
-    if(!message.member.voice.channel) {
-        return message.channel.send('❌You must be in a voice channel to use this command');
-    }
 
     if(command == 'play') {
+        if(!message.member.voice.channel) {
+            return message.channel.send('❌You must be in a voice channel to use this command');
+        }    
         distube.play(message, string);
     }
+
+    if (command == "skip") {
+        distube.skip(message, string);
+    }
+
+    if (command === 'queue') {
+		const queue = distube.getQueue(message)
+		message.channel.send(`Current queue:\n${queue.songs.map((song, id) =>
+			`**${id + 1}**. ${song.name} - \`${song.formattedDuration}\``).slice(0, 10).join('\n')}`)
+	}
 
     if(command == 'pause') {
         distube.pause(message, string);
@@ -66,11 +75,6 @@ client.on("message", async (message) => {
         distube.stop(message, string);
         message.channel.send("Leave the channel");
     }
-
-    if (command == "skip") {
-        distube.skip(message, string);
-    }
-
 
     if ([`3d`, `bassboost`, `echo`, `karaoke`, `nightcore`, `vaporwave`].includes(command)) {
         let filter = distube.setFilter(message, command);
