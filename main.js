@@ -50,21 +50,42 @@ client.on("message", async (message) => {
         distube.play(message, string);
     }
 
-    if (command == "skip") {
+    if(command == "skip") {
         if(!message.member.voice.channel) {
             return message.channel.send('❌ | You must be in a voice channel to use this command');
         }
-        let queue = await distube.getQueue(message);
-        if(queue) {
-            distube.skip(message)
-        } else if (!queue) {
-            return;
-        };
+        const queue = distube.getQueue(message)
+        if (!queue) {
+            return message.channel.send('❌ | There is nothing played right now!');
+        }
+        distube.skip(message)
+    }
+
+    if(command == "jump") {
+        if(!message.member.voice.channel) {
+            return message.channel.send('❌ | You must be in a voice channel to use this command');
+        }
+        const queue = distube.getQueue(message)
+        if (!queue) {
+            return message.channel.send('❌ | There is nothing played right now!');
+        }
+            if(0 <= Number(args[0]) && Number(args[0]) <= queue.songs.length){
+                message.channel.send(`✅ | Jumped ${parseInt(args[0])} songs`)
+                return distube.jump(message, parseInt(args[0]))
+                .catch(err => message.channel.send('❌ | Invalid number'));
+            }
+            else{
+                message.channel.send('❌ | Please use real number');
+            }
     }
 
     if(command == 'pause') {
         if(!message.member.voice.channel) {
             return message.channel.send('❌ | You must be in a voice channel to use this command');
+        }
+        const queue = distube.getQueue(message)
+        if (!queue) {
+            return message.channel.send('❌ | There is nothing played right now!');
         }
         distube.pause(message, string);
         return message.channel.send('⏸️ | Song is now paused | 🎵');
@@ -74,43 +95,66 @@ client.on("message", async (message) => {
         if(!message.member.voice.channel) {
             return message.channel.send('❌ | You must be in a voice channel to use this command');
         }
+        const queue = distube.getQueue(message)
+        if (!queue) {
+            return message.channel.send('❌ | There is nothing played right now!');
+        }
         distube.resume(message, string);
         return message.channel.send('▶️ | Song is played again | 🎵');
     }
 
-    if (command == "loop") {
+    if(command == "loop") {
+        const queue = distube.getQueue(message)
+        if (!queue) {
+            return message.channel.send('❌ | There is nothing played right now!');
+        }
+        let looped = distube.setRepeatMode(message, parseInt(args[1]));
         if(!message.member.voice.channel) {
             return message.channel.send('❌ | You must be in a voice channel to use this command');
         }
-        distube.setRepeatMode(message, parseInt(args[0]));
-        return message.channel.send('🔁 | Loop is now enabled | 🎵');
+        return looped + message.channel.send('🔁 | Loop is enabled | 🎵');
     }
 
-    if (command === 'queue') {
+    if(command == 'unloop') {
+        const queue = distube.getQueue(message)
+        if (!queue) {
+            return message.channel.send('❌ | There is nothing played right now!');
+        }
+        let looped = distube.setRepeatMode(message, parseInt(args[0]));
         if(!message.member.voice.channel) {
             return message.channel.send('❌ | You must be in a voice channel to use this command');
         }
-		const queue = distube.getQueue(message)
-		message.channel.send(`🎵 | Music Queue | 🎵\n${queue.songs.map((song, id) =>
-			`**${id + 1}**. \`${song.name} - ${song.formattedDuration}\``).slice(0, 10).join('\n')}`)
-
-        if(queue === null || queue === undefined) {
-            message.channel.send(`Radi \n${queue.songs.map((song, id) =>
-                `**${id + 1}**. \`${song.name} - ${song.formattedDuration}\``).slice(0, 10).join('\n')}`)
+        if(looped) {
+        looped = null;
+        return message.channel.send('🔁 | Loop is disabled | 🎵');
         }
+    }
+
+    if(command === 'queue') {
+        const queue = distube.getQueue(message)
+        if(!queue) {
+            if (!queue) return message.channel.send('❌ | There is nothing played right now!');
+        }
+        const status = (`\n${queue.songs.map((song, id) =>
+			`**${id + 1}**. \`${song.name} - ${song.formattedDuration}\``).slice(0, 10).join('\n')}`)
+        const embed = new Discord.MessageEmbed()
+        .setAuthor('🎵 | Music Queue | 🎵')
+        .setColor('#FF00A6')
+        .setDescription(status)
+        if(!message.member.voice.channel) {
+            return message.channel.send('❌ | You must be in a voice channel to use this command');
+        }
+        message.channel.send(embed);
 	}
 
-    if (command == "leave") {
+    if(command == "leave") {
         if(!message.member.voice.channel) {
             return message.channel.send('❌ | You must be in a voice channel to use this command');
         }
-        distube.stop(message, string);
+        message.guild.me.voice.connection.disconnect();
         message.channel.send('📃 | Player is now leaving | 🎵');
     }
 });
-
-// Queue status template
-const status = (queue) => `"All Queue" : "This Song" : "Off"}\``
 
 // Distube Event Listener
 distube
