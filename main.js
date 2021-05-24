@@ -131,6 +131,9 @@ client.on("message", async (message) => {
     }
 
     if(command === 'queue') {
+        if(!message.member.voice.channel) {
+            return message.channel.send('❌ | You must be in a voice channel to use this command');
+        }
         const queue = distube.getQueue(message)
         if(!queue) {
             if (!queue) return message.channel.send('❌ | There is nothing played right now!');
@@ -141,9 +144,6 @@ client.on("message", async (message) => {
         .setAuthor('🎵 | Music Queue | 🎵')
         .setColor('#FF00A6')
         .setDescription(status)
-        if(!message.member.voice.channel) {
-            return message.channel.send('❌ | You must be in a voice channel to use this command');
-        }
         message.channel.send(embed);
 	}
 
