@@ -7,7 +7,7 @@ module.exports = {
   callback: ({message}) => {
     let member = message.mentions.members.first();
       if(!member.kickable){
-          return message.channel.send(`${member} You cannot use that command`)
+          return message.channel.send(`❌ | ${member} You cannot use that command`)
       } if(member.kick){
           return member.kick() + message.channel.send(`User ${member} has been kicked`)
       } 

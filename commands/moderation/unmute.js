@@ -5,7 +5,7 @@ module.exports = {
     description: 'unmute command',
     callback:({client, message, args}) => {
         if(!message.member.hasPermission("MANAGE_ROLES")) {
-            return message.channel.send("You are not allowed to use this command");
+            return message.channel.send("❌ | You are not allowed to use this command");
         }
         let member = message.mentions.members.first();
         let mutedRole = message.guild.roles.cache.find(role => role.name === 'muted');

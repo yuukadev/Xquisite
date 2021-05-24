@@ -8,13 +8,13 @@ module.exports = {
         let reason = args.slice(1).join(" ");
         let mutedRole = message.guild.roles.cache.find(role => role.name === 'muted');
         if(!message.member.hasPermission("MANAGE_ROLES")) {
-            return message.channel.send(`You don't have permission to use this command`);
+            return message.channel.send(`❌ | You don't have permission to use this command`);
         };
         if(member.id === message.author.id) {
-            return message.channel.send(`You cannot mute yourself`);
+            return message.channel.send(`❌ | You cannot mute yourself`);
         };
         if(!mutedRole) {
-            return message.channel.send('Cannot find the muted role');
+            return message.channel.send('❌ | Cannot find the muted role');
         };
         if(reason === "") {
             reason = "Unspecified"
