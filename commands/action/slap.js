@@ -40,7 +40,7 @@ module.exports = {
             .setTimestamp()
             message.channel.send(embed);
         } else {
-            message.reply('❌ | Please specify someone');
+            message.channel.send('❌ | Please specify someone');
         }
     }
 }
