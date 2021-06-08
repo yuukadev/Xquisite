@@ -44,6 +44,7 @@ These are some of the current commands provided by the bot
 * ```!meme - Sends random meme```
 * ```!quote - Sends random quote```
 * ```!coinflip - Play game coinflip```
+* ```!reverse - Reverse a word```
 
 #### Action Commands
 * ```!hug - Sends gif of hugging```
