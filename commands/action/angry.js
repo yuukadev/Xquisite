@@ -8,7 +8,7 @@ module.exports = {
     example: ['!angry @member'],
     callback({message}) {
         let member = message.mentions.users.first();
-        const imagesAngry = [
+        const imagesAngry = [ // All the gifs
             "https://media.giphy.com/media/9w9Z2ZOxcbs1a/giphy.gif",
             "https://media.giphy.com/media/nnIfvLqA2SbuGr3VAL/giphy.gif",
             "https://media.giphy.com/media/U77FFxuyoIPvHEIgkq/giphy.gif",
@@ -28,7 +28,7 @@ module.exports = {
         const randomImage = imagesAngry[Math.floor(Math.random() * imagesAngry.length)];
         if(member){
             let embed = new Discord.MessageEmbed()
-            .setTitle(`Watch out ${member.username} maybe ${message.author.username} is angry! :face_with_symbols_over_mouth:`)
+            .setTitle(`Watch out ${member.username} maybe ${message.author.username} is angry! :face_with_symbols_over_mouth:`) // Message that is sended
             .setColor('#FF00A6')
             .setImage(randomImage)
             .setTimestamp()
