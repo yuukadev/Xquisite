@@ -14,7 +14,7 @@ module.exports = {
 		{ name: 'Fun', value: ['!meme - Sends meme','!quote - Sends random quote','!hug - Sends a hug gif'], inline: true },
 )
 */ 
-        .addField('Moderation Commands', ['\`!ban - Ban member\`','\`!kick - Kick member\`','\`!mute - Mute member\`','\`!unmute - Unmute member\`','\`!clear - Clear messages\`'], false)
+        .addField('Moderation Commands', ['\`!ban - Ban member\`','\`!kick - Kick member\`','\`!mute - Mute member\`','\`!unmute - Unmute member\`','\`!clear - Clear messages\`', '\`!addrole - Addrole for member\`', '\`!removerole - Remove role\`'], false)
         .addField("Fun Commands", ['\`!meme - Sends meme\`', '\`!quote - Sends quote\`',], false)
         .addField("Action Commands", ['\`!hug - Sends gif of hugging\`', '\`!punch - Sends gif of punching\`', '\`!slap - Sends gif of slaping\`', '\`!pat - Sends gif of patting\`', '\`!pout - Sends gif of pouting\`', '\`!blush - Sends gif of blushing\`'], false)
         .addField("Info Commands", ['\`!help - Sends help embed about commands\`', '\`!info - Sends info about bot\`', '\`!avatar - Sends avatar\`',], false)
