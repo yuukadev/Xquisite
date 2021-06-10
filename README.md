@@ -42,7 +42,6 @@ These are some of the current commands provided by the bot
 * ```!addrole - Addrole for someone```
 * ```!removerole - Remove role```
 
-
 #### Fun Commands
 * ```!meme - Sends random meme```
 * ```!quote - Sends random quote```
