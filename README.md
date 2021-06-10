@@ -39,6 +39,9 @@ These are some of the current commands provided by the bot
 * ```!mute - Mute member```
 * ```!unmute - Unmute member```
 * ```!clear - Clear messages```
+* ```!addrole - Addrole for someone```
+* ```!removerole - Remove role```
+
 
 #### Fun Commands
 * ```!meme - Sends random meme```
