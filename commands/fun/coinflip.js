@@ -6,7 +6,7 @@ module.exports = {
     category: 'fun',
     example: ['!coinflip'],
     callback({message}) {
-        const choice = ["Heads", "Tails"];
+        const choice = ["Heads", "Tails"]; // Array of choices
         const randomChoice = choice[Math.floor(Math.random() * choice.length)];
         let embed = new Discord.MessageEmbed()
         .setColor('#FF00A6')
