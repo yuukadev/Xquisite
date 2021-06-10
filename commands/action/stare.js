@@ -8,7 +8,7 @@ module.exports = {
     example: ['!stare @member'],
     callback({message}) {
         let member = message.mentions.users.first();
-        const imagesStare = [
+        const imagesStare = [ // All the gifs
             "https://media1.tenor.com/images/e3ed0701f3d0e6a794afd2c035461876/tenor.gif?itemid=9902957",
             "https://media1.tenor.com/images/c35ac80c3e7b9a049cd351e7dc9dd50f/tenor.gif?itemid=13582228",
             "https://media1.tenor.com/images/e2c0c747f4aa477ee1e67c343c0ad188/tenor.gif?itemid=16188897",
@@ -25,7 +25,7 @@ module.exports = {
         const randomImage = imagesStare[Math.floor(Math.random() * imagesStare.length)];
         if(member){
             let embed = new Discord.MessageEmbed()
-            .setTitle(`Looks like ${message.author.username} is staring at ${member.username} :eyes:`)
+            .setTitle(`Looks like ${message.author.username} is staring at ${member.username} :eyes:`) // Message that is sended
             .setColor('#FF00A6')
             .setImage(randomImage)
             .setTimestamp()
