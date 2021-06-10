@@ -1,6 +1,10 @@
 const Discord = require('discord.js');
 
 module.exports = {
+    name: 'reverse',
+    description: 'this command sends reversed word that you put',
+    category: 'fun',
+    example: ['!reverse @word'],
     callback({message, args}) {
         const msg = args.join(" ")
         let array = msg.split("")
