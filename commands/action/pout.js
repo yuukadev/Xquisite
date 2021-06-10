@@ -8,7 +8,7 @@ module.exports = {
     example: ['!pout @member'],
     callback({message}) {
         let member = message.mentions.users.first();
-        const imagesPout = [
+        const imagesPout = [ // All the gifs
             "https://media.giphy.com/media/TEJe85dPYW0Uw/giphy.gif",
             "https://media.giphy.com/media/X3VrxPijowGC4/giphy.gif",
             "https://media1.tenor.com/images/dfec7d2c203c08f5c6d0ddb82c3dda6f/tenor.gif?itemid=12942766",
@@ -26,7 +26,7 @@ module.exports = {
         const randomImage = imagesPout[Math.floor(Math.random() * imagesPout.length)];
         if(member){
             let embed = new Discord.MessageEmbed()
-            .setTitle(`${message.author.username} seems to pouts at ${member.username} :pleading_face:`)
+            .setTitle(`${message.author.username} seems to pouts at ${member.username} :pleading_face:`) // Message that is sended
             .setColor('#FF00A6')
             .setImage(randomImage)
             .setTimestamp()
