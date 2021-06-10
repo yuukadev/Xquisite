@@ -9,9 +9,9 @@ module.exports = {
   callback: ({message}) => {
     const member = message.mentions.members.first();
       if(!member.bannable){
-          return message.channel.send(`❌ | ${member} You cannot use that command`)
+          return message.channel.send(`❌ | ${member} You cannot use that command`) // Message for missing permission
       } if(member.ban){
-          return member.ban() + message.channel.send(`User ${member} has been banned`)
+          return member.ban() + message.channel.send(`User ${member} has been banned`) // Message when user is banned
     }
   }
 }
