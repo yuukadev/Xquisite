@@ -2,6 +2,10 @@ const Discord = require('discord.js');
 const Math = require('mathjs');
 
 module.exports = {
+    name: 'slap',
+    description: 'this command sends a slapping gif',
+    category: 'action',
+    example: ['!slap @member'],
     callback({message}) {
         let member = message.mentions.users.first();
         const imagesSlap = [
