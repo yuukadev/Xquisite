@@ -1,9 +1,11 @@
 module.exports = {
+  name: 'kick',
+  description: "this command kick someone",
+  category: 'moderation',
+  example: ['!kick @member'],
   minArgs: 1,
   requiredPermissions: ["ADMINISTRATOR", "KICK_MEMBERS"],
   syntaxError: "Please specify someone",
-  category: 'moderation',
-  description: 'kick command',
   callback: ({message}) => {
     let member = message.mentions.members.first();
       if(!member.kickable){
