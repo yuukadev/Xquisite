@@ -1,5 +1,9 @@
 const Discord = require('discord.js');
 module.exports = {
+    name: 'avatar',
+    description: "this command sends avatar of someone's discord picture",
+    category: 'info',
+    example: ['!avatar @member'],
     callback({message}) {
         let member = message.mentions.users.first() || message.author
         let avatar = member.displayAvatarURL({dynamic: true, size: 1024})
