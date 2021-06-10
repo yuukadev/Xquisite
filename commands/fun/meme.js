@@ -6,7 +6,7 @@ module.exports = {
     category: 'fun',
     example: ['!meme'],
     callback: ({message}) => {
-        got('https://www.reddit.com/r/memes/random/.json').then(res => {
+        got('https://www.reddit.com/r/memes/random/.json').then(res => { // The page that sends meme's
             let content = JSON.parse(res.body)
             message.channel.send(
                 new MessageEmbed()
