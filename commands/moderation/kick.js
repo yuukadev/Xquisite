@@ -9,9 +9,9 @@ module.exports = {
   callback: ({message}) => {
     let member = message.mentions.members.first();
       if(!member.kickable){
-          return message.channel.send(`❌ | ${member} You cannot use that command`)
+          return message.channel.send(`❌ | ${member} You cannot use that command`) // Message for missing permission
       } if(member.kick){
-          return member.kick() + message.channel.send(`User ${member} has been kicked`)
+          return member.kick() + message.channel.send(`User ${member} has been kicked`) // Message when user is kicked
       } 
     }
   }
