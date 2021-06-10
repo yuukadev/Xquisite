@@ -1,8 +1,10 @@
 const Discord = require('discord.js');
 
 module.exports = {
-    category: 'fun',
+    name: 'meme',
     description: 'this command sends random quote',
+    category: 'fun',
+    example: ['!quote'],
     callback({message}) {
         const quotes = [
         "The greatest glory in living lies not in never falling, but in rising every time we fall. - Nelson Mandela", 
