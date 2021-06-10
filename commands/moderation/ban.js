@@ -1,9 +1,11 @@
 module.exports = {
+  name: 'ban',
+  description: "this command ban someone",
+  category: 'moderation',
+  example: ['!ban @member'],
   minArgs: 1,
   requiredPermissions: ["ADMINISTRATOR", "BAN_MEMBERS"],
   syntaxError: 'Please specify someone',
-  category: 'moderation',
-  description: 'ban command',
   callback: ({message}) => {
     const member = message.mentions.members.first();
       if(!member.bannable){
