@@ -1,8 +1,11 @@
 module.exports = {
+    name: 'clear',
+    description: "this command clear messages",
+    category: 'moderation',
+    example: ['!clear @number'],
     minArgs: 1,
     requiredPermissions: ["MANAGE_MESSAGES"],
     syntaxError: "Enter the amount of messages to clear",
-    description: "clear messages command",
     callback({message, args}) { 
         if(isNaN(args[0])) {
             return message.channel.send("❌ | Enter a real number");
