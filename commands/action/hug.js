@@ -2,6 +2,10 @@ const Discord = require('discord.js');
 const Math = require('mathjs');
 
 module.exports = {
+    name: 'hug',
+    description: 'this command sends a hug gif',
+    category: 'action',
+    example: ['!hug @member'],
     callback({message}) {
         let member = message.mentions.users.first();
         const imagesHug = [
