@@ -1,8 +1,10 @@
 module.exports = {
+    name: 'mute',
+    description: "this command mute someone",
+    category: 'moderation',
+    example: ['!mute @member @reason'],
     minArgs: 1,
     syntaxError: "Please specify someone",
-    category: 'moderation',
-    description: 'mute command',
     callback:({client, message, args}) => {
         let member = message.mentions.members.first();
         let reason = args.slice(1).join(" ");
