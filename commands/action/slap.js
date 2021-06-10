@@ -8,7 +8,7 @@ module.exports = {
     example: ['!slap @member'],
     callback({message}) {
         let member = message.mentions.users.first();
-        const imagesSlap = [
+        const imagesSlap = [ // All the gifs
             "https://media.giphy.com/media/xUNd9HZq1itMkiK652/giphy.gif",
             "https://media.giphy.com/media/xUO4t2gkWBxDi/giphy.gif",
             "https://media.giphy.com/media/Zau0yrl17uzdK/giphy.gif",
@@ -38,7 +38,7 @@ module.exports = {
         const randomImage = imagesSlap[Math.floor(Math.random() * imagesSlap.length)];
         if(member){
             let embed = new Discord.MessageEmbed()
-            .setTitle(`Ouch you slapped ${member.username}! :persevere:`)
+            .setTitle(`Ouch you slapped ${member.username}! :persevere:`) // Message that is sended
             .setColor('#FF00A6')
             .setImage(randomImage)
             .setTimestamp()
