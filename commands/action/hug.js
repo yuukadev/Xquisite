@@ -8,7 +8,7 @@ module.exports = {
     example: ['!hug @member'],
     callback({message}) {
         let member = message.mentions.users.first();
-        const imagesHug = [
+        const imagesHug = [ // All the gifs
             "https://media.giphy.com/media/u9BxQbM5bxvwY/giphy.gif",
             "https://media.giphy.com/media/PHZ7v9tfQu0o0/giphy.gif",
             "https://media.giphy.com/media/3bqtLDeiDtwhq/giphy.gif",
@@ -36,7 +36,7 @@ module.exports = {
         const randomImage = imagesHug[Math.floor(Math.random() * imagesHug.length)];
         if(member){
             let embed = new Discord.MessageEmbed()
-            .setTitle(`You hugged ${member.username}! :smiling_face_with_3_hearts:`)
+            .setTitle(`You hugged ${member.username}! :smiling_face_with_3_hearts:`) // Message that is sended
             .setColor('#FF00A6')
             .setImage(randomImage)
             .setTimestamp()
