@@ -47,6 +47,7 @@ These are some of the current commands provided by the bot
 * ```!quote - Sends random quote```
 * ```!coinflip - Play game coinflip```
 * ```!reverse - Reverse a word```
+* ```!roll - Roll a dice```
 
 #### Action Commands
 * ```!hug - Sends gif of hugging```
