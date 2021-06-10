@@ -1,8 +1,10 @@
 module.exports = {
+    name: 'unmute',
+    description: "this command unmute someone if they are muted",
+    category: 'moderation',
+    example: ['!unmute @member'],
     minArgs: 1,
     syntaxError: "Please specify someone",
-    category: 'moderation',
-    description: 'unmute command',
     callback:({client, message, args}) => {
         if(!message.member.hasPermission("MANAGE_ROLES")) {
             return message.channel.send("❌ | You are not allowed to use this command");
