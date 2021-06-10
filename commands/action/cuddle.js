@@ -8,7 +8,7 @@ module.exports = {
     example: ['!cuddle @member'],
     callback({message}) {
         let member = message.mentions.users.first();
-        const imagesCuddle = [
+        const imagesCuddle = [ // All the gifs
             "https://media1.tenor.com/images/7edded2757934756fdc240019d956cb3/tenor.gif?itemid=16403937",
             "https://media1.tenor.com/images/a829b33d49f61a042728c06347bddd57/tenor.gif?itemid=5166505",
             "https://media1.tenor.com/images/9af57b60dca6860724a0ff6c1689c246/tenor.gif?itemid=8467962",
@@ -21,7 +21,7 @@ module.exports = {
         const randomImage = imagesCuddle[Math.floor(Math.random() * imagesCuddle.length)];
         if(member){
             let embed = new Discord.MessageEmbed()
-            .setTitle(`That's cute ${message.author.username} is cuddling with ${member.username} :relaxed:`)
+            .setTitle(`That's cute ${message.author.username} is cuddling with ${member.username} :relaxed:`) // Message that is sended
             .setColor('#FF00A6')
             .setImage(randomImage)
             .setTimestamp()
