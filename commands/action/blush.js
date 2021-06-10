@@ -8,7 +8,7 @@ module.exports = {
     example: ['!blush @member'],
     callback({message}) {
         let member = message.mentions.users.first();
-        const imagesBlush = [
+        const imagesBlush = [ // All the gifs
             "https://media1.tenor.com/images/84307582253a96e4552d20e3ecef3a33/tenor.gif?itemid=5531498",
             "https://media1.tenor.com/images/cbfd2a06c6d350e19a0c173dec8dccde/tenor.gif?itemid=15727535",
             "https://media1.tenor.com/images/4c03573f06a1bd8841976abdafd16d26/tenor.gif?itemid=15711893",
@@ -31,7 +31,7 @@ module.exports = {
         const randomImage = imagesBlush[Math.floor(Math.random() * imagesBlush.length)];
         if(member){
             let embed = new Discord.MessageEmbed()
-            .setTitle(`${message.author.username} blushed at ${member.username} :flushed:`)
+            .setTitle(`${message.author.username} blushed at ${member.username} :flushed:`) // Message that is sended
             .setColor('#FF00A6')
             .setImage(randomImage)
             .setTimestamp()
