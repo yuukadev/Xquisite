@@ -5,7 +5,7 @@ module.exports = {
     description: 'this command sends random memes',
     category: 'fun',
     example: ['!meme'],
-    callback: ({client, message}) => {
+    callback: ({message}) => {
         got('https://www.reddit.com/r/memes/random/.json').then(res => {
             let content = JSON.parse(res.body)
             message.channel.send(
