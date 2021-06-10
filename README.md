@@ -78,12 +78,12 @@ These are some of the current commands provided by the bot
 * ```!leave - Disconnect a player```
 
 # Contributing
-1. Fork the repository
-2. Clone your fork: git clone https://github.com/your-username/discordjs-bot.git
-3. Create your feature branch: git checkout -b my-new-feature
-4. Commit your changes: git commit -am 'Add some feature'
-5. Push to the branch: git push origin my-new-feature
-6. Submit a pull request
+* Fork the repository
+* Clone your fork: git clone https://github.com/your-username/discordjs-bot.git
+* Create your feature branch: git checkout -b my-new-feature
+* Commit your changes: git commit -am 'Add some feature'
+* Push to the branch: git push origin my-new-feature
+* Submit a pull request
 
 ## Social Media
 [Twitter](https://twitter.com/yuukasuoh)
