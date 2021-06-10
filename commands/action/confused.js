@@ -2,6 +2,10 @@ const Discord = require('discord.js');
 const Math = require('mathjs');
 
 module.exports = {
+    name: 'confused',
+    description: 'this command sends a confusing gif',
+    category: 'action',
+    example: ['!confused @member'],
     callback({message}) {
         let member = message.mentions.users.first();
         const imagesConfused = [
