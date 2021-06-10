@@ -1,6 +1,10 @@
 const Discord = require('discord.js');
 
 module.exports = {
+    name: 'coinflip',
+    description: 'with this command you can play coinflip',
+    category: 'fun',
+    example: ['!coinflip'],
     callback({message}) {
         const choice = ["Heads", "Tails"];
         const randomChoice = choice[Math.floor(Math.random() * choice.length)];
