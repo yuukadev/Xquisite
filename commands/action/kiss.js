@@ -8,7 +8,7 @@ module.exports = {
     example: ['!kiss @member'],
     callback({message}) {
         let member = message.mentions.users.first();
-        const imagesKiss = [
+        const imagesKiss = [ // All the gifs
             "https://media1.tenor.com/images/503bb007a3c84b569153dcfaaf9df46a/tenor.gif?itemid=17382412",
             "https://media1.tenor.com/images/ea9a07318bd8400fbfbd658e9f5ecd5d/tenor.gif?itemid=12612515",
             "https://media1.tenor.com/images/02d9cae34993e48ab5bb27763d5ca2fa/tenor.gif?itemid=4874618",
@@ -29,7 +29,7 @@ module.exports = {
         const randomImage = imagesKiss[Math.floor(Math.random() * imagesKiss.length)];
         if(member){
             let embed = new Discord.MessageEmbed()
-            .setTitle(`You kissed ${member.username}! :heart_eyes: `)
+            .setTitle(`You kissed ${member.username}! :heart_eyes: `) // Message that is sended
             .setColor('#FF00A6')
             .setImage(randomImage)
             .setTimestamp()
