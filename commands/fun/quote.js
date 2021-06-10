@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 
 module.exports = {
-    name: 'meme',
+    name: 'quote',
     description: 'this command sends random quote',
     category: 'fun',
     example: ['!quote'],
