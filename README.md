@@ -48,6 +48,8 @@ These are some of the current commands provided by the bot
 * ```!coinflip - Play game coinflip```
 * ```!reverse - Reverse a word```
 * ```!roll - Roll a dice```
+* ```!8ball - Plays 8ball game```
+* ```!howgay - How much are you gay```
 
 #### Action Commands
 * ```!hug - Sends gif of hugging```
