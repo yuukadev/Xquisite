@@ -16,7 +16,7 @@ module.exports = {
         if(member){
             const embed = new Discord.MessageEmbed()
             .setTitle('Results')
-            .setDescription(`${member.username} is ${random}% gay :rainbow:`)
+            .setDescription(`${member.username} is ${random}% gay :rainbow:`) // Message
             .setColor('#FF00A6')
     
             message.channel.send(embed);
