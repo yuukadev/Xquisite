@@ -15,7 +15,7 @@ module.exports = {
 )
 */ 
         .addField('Moderation Commands', ['\`!ban - Ban member\`','\`!kick - Kick member\`','\`!mute - Mute member\`','\`!unmute - Unmute member\`','\`!clear - Clear messages\`', '\`!addrole - Addrole for member\`', '\`!removerole - Remove role\`'], false)
-        .addField("Fun Commands", ['\`!meme - Sends meme\`', '\`!quote - Sends quote\`', '\`!coinflip - Play game coinflip\`', '\`!reverse - Reverse a word\`', '\`!roll - Roll a dice\`'], false)
+        .addField("Fun Commands", ['\`!meme - Sends meme\`', '\`!quote - Sends quote\`', '\`!coinflip - Play game coinflip\`', '\`!reverse - Reverse a word\`', '\`!roll - Roll a dice\`', '\`!8ball - Roll a dice\`', '\`!howgay - Roll a dice\`'], false)
         .addField("Action Commands", ['\`!hug - Sends gif of hugging\`', '\`!punch - Sends gif of punching\`', '\`!slap - Sends gif of slaping\`', '\`!pat - Sends gif of patting\`', '\`!pout - Sends gif of pouting\`', '\`!blush - Sends gif of blushing\`'], false)
         .addField("Info Commands", ['\`!help - Sends help embed about commands\`', '\`!info - Sends info about bot\`', '\`!avatar - Sends avatar\`',], false)
         .addField("Music Commands", ['\`!play - Plays a song\`', '\`!skip - Skips a song\`', '\`!pause - Pause a song\`', '\`!resume - Resume a paused song\`', '\`!loop - Toggles loop\`', '\`!unloop - Disable loop\`', '\`!jump - Jump to the song number in the queue\`', '\`!queue - Shows the queue of songs\`', '\`!leave - Disconnect a player\`'], false)
