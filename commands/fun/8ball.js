@@ -10,7 +10,7 @@ module.exports = {
             return message.reply('Please ask a full question');
         }
 
-        let replies = ["yes.", 
+        let replies = ["yes.",  // Replies
                        "Outlook seems good.", 
                        "yus", "of course.", 
                        "Yes – definitely.", "no.", 
@@ -26,14 +26,13 @@ module.exports = {
                        "ask again.. later.."];
                  
         const randomReplies = replies[Math.floor(Math.random() * replies.length)];
-        let question = args.slice().join(" ");
 
-        let ballembed = new Discord.MessageEmbed()
-        .setAuthor(`📜 Answer for ${message.author.username}`)
+        let embed = new Discord.MessageEmbed()
+        .setAuthor(`📜 Answer for ${message.author.username}`) // Message
         .setColor("#1C1C1C")
         .setDescription(`🎱 ${randomReplies}`)
         .setColor('#FF00A6')
 
-        message.channel.send(ballembed)
+        message.channel.send(embed)
     }
 }
