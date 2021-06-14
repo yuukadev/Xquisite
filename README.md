@@ -51,6 +51,11 @@ These are some of the current commands provided by the bot
 * ```!8ball - Plays 8ball game```
 * ```!howgay - How much are you gay```
 
+#### Anime Commands
+* ```!anime - Search for anime```
+* ```!manga - Search for manga```
+* ```!ranime - Sends random image of anime```
+
 #### Action Commands
 * ```!hug - Sends gif of hugging```
 * ```!punch - Sends gif of punching```
