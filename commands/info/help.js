@@ -5,7 +5,7 @@ module.exports = {
     category: 'info',
     example: ['!help'],
     callback: (message) => {
-        const exampleEmbed = new Discord.MessageEmbed()
+        const embed = new Discord.MessageEmbed()
         .setColor('#FF00A6')
         .setTitle('Xquisite Help')
         .setDescription("Here you can see all the commands that the bot provides") 
@@ -23,6 +23,6 @@ module.exports = {
         .attachFiles('Commands.jpg')
         .setImage('attachment://Commands.jpg')
         .setTimestamp()
-        message.channel.send(exampleEmbed);
+        message.channel.send(embed);
     }
 }
