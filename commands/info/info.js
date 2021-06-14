@@ -5,7 +5,7 @@ module.exports = {
     category: 'info',
     example: ['!info'],
     callback: (message) => {
-    const exampleEmbed = new Discord.MessageEmbed()
+    const embed = new Discord.MessageEmbed()
     .setColor('#FF00A6')
     .setTitle('Xquisite Bot')
     .setURL('https://github.com/YuukaDev')
@@ -14,13 +14,13 @@ module.exports = {
     .addFields(
 	{ name: '</Twitter>', value: '[Twitter Profile](https://twitter.com/yuukasuoh)', inline: true },
 	{ name: '</GitHub>', value: '[GitHub Profile](https://twitter.com/yuukasuoh)', inline: true },
-        { name: '</Reddit>', value: '[Reddit Profile](https://www.reddit.com/user/Rintarrou)', inline: true },
+    { name: '</Reddit>', value: '[Reddit Profile](https://www.reddit.com/user/Rintarrou)', inline: true },
     )
     .attachFiles('logo.jpg')
     .setImage('attachment://logo.jpg')
     .setTimestamp()
     .setFooter('Made by Yuuka');
 
-    message.channel.send(exampleEmbed);
+    message.channel.send(embed);
     }
 }
