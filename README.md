@@ -95,3 +95,4 @@ These are some of the current commands provided by the bot
 
 ## Social Media
 [Twitter](https://twitter.com/yuukasuoh)
+Discord - Вук#1097
