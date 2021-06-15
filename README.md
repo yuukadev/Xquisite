@@ -30,6 +30,8 @@ You need to have :
 
 [WOKCommands](https://www.npmjs.com/package/wokcommands) - ```npm i wokcommands```
 
+[Distube](https://www.npmjs.com/package/distube) - ```npm i distube```
+
 ## Features
 These are some of the current commands provided by the bot
 
