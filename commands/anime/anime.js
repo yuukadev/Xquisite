@@ -17,7 +17,10 @@ module.exports = {
     .setURL(`${info.results[0].url}`)
     .setDescription(`${info.results[0].synopsis}`)
     .addFields(
-    { name: 'Rating', value: `${info.results[0].score}` },
+    { name: 'Rating', value: `${info.results[0].score}`, inline: true},
+    { name: 'Episodes', value: `${info.results[0].episodes}`, inline: true},
+    { name: 'Type', value: `${info.results[0].type}`, inline: true},
+    { name: 'Rate', value: `${info.results[0].rated}`, inline: true},
     )
     .setImage(`${info.results[0].image_url}`)
     .setTimestamp()
