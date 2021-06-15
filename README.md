@@ -20,15 +20,15 @@ You need to have :
 * ```Python (to support more sites)```
 
 ## Packages
-Nodemon - ```npm install -g nodemon```
+[Nodemon](https://www.npmjs.com/package/nodemon) - ```npm install -g nodemon```
 
-GOT - ```npm i got```
+[GOT](https://www.npmjs.com/package/got) - ```npm i got```
 
-FFmpeg - ```npm i ffmpeg```
+[FFmpeg](https://www.npmjs.com/package/ffmpeg) - ```npm i ffmpeg```
 
-MathJs - ```npm install mathjs```
+[MathJs](https://www.npmjs.com/package/mathjs) - ```npm install mathjs```
 
-WOKCommands - ```npm i wokcommands```
+[WOKCommands](https://www.npmjs.com/package/wokcommands) - ```npm i wokcommands```
 
 ## Features
 These are some of the current commands provided by the bot
