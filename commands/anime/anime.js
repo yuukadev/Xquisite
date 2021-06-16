@@ -57,23 +57,23 @@ module.exports = {
 
     mal.search("anime", args, 'page').then(info => {
     const embed = new Discord.MessageEmbed()    
-    .setAuthor(`📜 Anime for ${member.username}`)
-    .setThumbnail(`${info.results[0].image_url}`)
-    .setColor('#FF00A6')
-    .setTitle(`${info.results[0].title}`)
-    .setURL(`${info.results[0].url}`)
-    .setDescription(`${info.results[0].synopsis}`)
-    .addFields(
-    { name: ':calendar: Release Date', value: `${info.results[0].start_date}`, inline: true}, 
-    { name: ':calendar_spiral: End Date', value: `${info.results[0].end_date}`, inline: true},
-    { name: '✨ Score', value: `${info.results[0].score}`, inline: true},
-    { name: '🖥️ Type', value: `${info.results[0].type}`, inline: true},
-    { name: '💬 Rating', value: `${info.results[0].rated}`, inline: true},
-    { name: '🔩 Episodes', value: `${info.results[0].episodes}`, inline: true},
-    )
-    .setImage(`${info.results[0].image_url}`)
-    .setTimestamp()
-    message.channel.send(embed);
+        .setAuthor(`📜 Anime for ${member.username}`)
+        .setThumbnail(`${info.results[0].image_url}`)
+        .setColor('#FF00A6')
+        .setTitle(`${info.results[0].title}`)
+        .setURL(`${info.results[0].url}`)
+        .setDescription(`${info.results[0].synopsis}`)
+        .addFields(
+            { name: ':calendar: Release Date', value: `${info.results[0].start_date}`, inline: true}, 
+            { name: ':calendar_spiral: End Date', value: `${info.results[0].end_date}`, inline: true},
+            { name: '✨ Score', value: `${info.results[0].score}`, inline: true},
+            { name: '🖥️ Type', value: `${info.results[0].type}`, inline: true},
+            { name: '💬 Rating', value: `${info.results[0].rated}`, inline: true},
+            { name: '🔩 Episodes', value: `${info.results[0].episodes}`, inline: true},
+            )
+        .setImage(`${info.results[0].image_url}`)
+        .setTimestamp()
+        message.channel.send(embed);
             });
     }
 }
