@@ -3,6 +3,11 @@ const Jikan = require('jikan-node');
 const mal = new Jikan();
 
 module.exports = {
+    name: 'manga',
+    aliases: 'searchmanga',
+    description: 'this command search for manga you type',
+    category: 'anime',
+    example: ['!manga', /* Or */ '!searchmanga'],
     callback({message, args}) {
     
     let member = message.author;
