@@ -47,6 +47,11 @@ let id = {
 */
 
 module.exports = {
+    name: 'anime',
+    aliases: 'searchanime',
+    description: 'this command search for anime you type',
+    category: 'anime',
+    example: ['!anime', /* Or */ '!searchanime'],
     callback({message, args}) {
     
     let member = message.author;
