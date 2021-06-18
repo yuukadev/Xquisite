@@ -1,6 +1,11 @@
 const Discord = require('discord.js');
 
 module.exports = {
+    name: 'qanime',
+    aliases: 'quoteanime',
+    description: 'this command sends anime quote',
+    category: 'anime',
+    example: ['!qanime', /* Or */ '!quoteanime'],
     callback({message}) {
         let member = message.author;
         let quotes = require('../base/animequote.json');
