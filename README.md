@@ -77,6 +77,7 @@ These are some of the current commands provided by the bot
 * ```!info - Sends info about bot```
 * ```!avatar - Sends avatar```
 * ```!serverinfo - Sends information of server```
+* ```!userinfo - Sends information of user```
 
 #### Music Commands
 * ```!play - Plays a song```
