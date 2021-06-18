@@ -57,6 +57,7 @@ These are some of the current commands provided by the bot
 * ```!anime - Search for anime```
 * ```!manga - Search for manga```
 * ```!ranime - Sends random image of anime```
+* ```!qanime - Sends random anime quote```
 
 #### Action Commands
 * ```!hug - Sends gif of hugging```
