@@ -18,7 +18,7 @@ module.exports = {
             `• **Name**: ${message.guild.name}`,
             `• **Server ID**: ${message.guild.id}`,
             `• **Owner**: <@${message.guild.ownerID}>`,
-            `• **Server Created**: ${message.guild.createdAt}`, 
+            `• **Server Created**: ${moment(message.guild.createdTimestamp).format('LL LTS')}`, 
         ])
         .addField('📂 Member Information',[
             `• **Users**: ${message.guild.memberCount}`,
