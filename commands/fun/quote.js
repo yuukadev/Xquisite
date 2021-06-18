@@ -76,8 +76,9 @@ module.exports = {
         const randomMessage = quotes[Math.floor(Math.random() * quotes.length)];
 
         const embed = new Discord.MessageEmbed()
+        .setAuthor(`📜 Quote for ${member.username}`)
         .setColor('#FF00A6')
-        .setTitle(`${randomMessage}`)
+        .setDescription(`${randomMessage}`)
         message.channel.send(embed);
     }
 }
