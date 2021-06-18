@@ -1,6 +1,10 @@
 const Discord = require("discord.js");
 const moment = require('moment');
 module.exports = {
+    name: 'userinfo',
+    description: 'this command sends info about user',
+    category: 'info',
+    example: ['!userinfo'],
     callback({message}) {
         const user = message.mentions.users.first() || message.author;
         const member = message.guild.members.cache.get(user.id);
