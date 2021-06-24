@@ -8,7 +8,7 @@ module.exports = {
     example: ['!pat @member'],
     callback({message}) {
         let member = message.mentions.users.first();
-        const imagesPat = [ // All the gifs
+        const imagesPat = [
             "https://media1.tenor.com/images/da8f0e8dd1a7f7db5298bda9cc648a9a/tenor.gif?itemid=12018819",
             "https://media1.tenor.com/images/f5176d4c5cbb776e85af5dcc5eea59be/tenor.gif?itemid=5081286",
             "https://media1.tenor.com/images/f41b3974036070fd1c498acf17a3a42e/tenor.gif?itemid=14751753",
@@ -33,7 +33,7 @@ module.exports = {
         const randomImage = imagesPat[Math.floor(Math.random() * imagesPat.length)];
         if(member){
             let embed = new Discord.MessageEmbed()
-            .setTitle(`Aww you patted ${member.username}! :blush:`) // Message that is sended
+            .setTitle(`Aww you patted ${member.username}! :blush:`)
             .setColor('#FF00A6')
             .setImage(randomImage)
             .setTimestamp()
