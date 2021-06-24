@@ -2,11 +2,12 @@ const Discord = require('discord.js');
 
 module.exports = {
     name: 'coinflip',
-    description: 'with this command you can play coinflip',
+    aliases: 'coin',
+    description: "This command flip coin for you",
     category: 'fun',
     example: ['!coinflip'],
     callback({message}) {
-        const choice = ["Heads", "Tails"]; // Array of choices
+        const choice = ["Heads", "Tails"];
         const randomChoice = choice[Math.floor(Math.random() * choice.length)];
         let embed = new Discord.MessageEmbed()
         .setColor('#FF00A6')
