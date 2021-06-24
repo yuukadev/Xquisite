@@ -1,12 +1,12 @@
 const Discord = require('discord.js');
 module.exports = {
     name: 'avatar',
-    description: "this command sends avatar of someone's discord picture",
+    description: 'This command sends image of your or someone discord avatar',
     category: 'info',
-    example: ['!avatar @member'],
+    example: ['!avatar', /* Or */ '!avatar @member'],
     callback({message}) {
         let member = message.mentions.users.first() || message.author
-        let avatar = member.displayAvatarURL({dynamic: true, size: 1024}) // Avatar options
+        let avatar = member.displayAvatarURL({dynamic: true, size: 1024})
 
         const embed = new Discord.MessageEmbed()
         .setTitle(`${member.username}'s avatar`)
