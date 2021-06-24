@@ -54,6 +54,7 @@ These are some of the current commands provided by the bot
 * ```!roll - Roll a dice```
 * ```!8ball - Plays 8ball game```
 * ```!howgay - How much are you gay```
+* ```!color - Send a random hex color```
 
 #### Anime Commands
 * ```!anime - Search for anime```
