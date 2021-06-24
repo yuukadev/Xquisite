@@ -3,14 +3,16 @@ const Discord = require('discord.js');
 module.exports = {
     name: 'qanime',
     aliases: 'quoteanime',
-    description: 'this command sends anime quote',
+    description: "This command sends you random anime quote",
     category: 'anime',
-    example: ['!qanime', /* Or */ '!quoteanime'],
+    example: ['!qanime'],
     callback({message}) {
-        let member = message.author;
-        let quotes = require('../base/animequote.json');
-        const objectKey = Object.keys(quotes)
-        const randomQuote = Math.floor(Math.random() * objectKey.length)
+        const member = message.author;
+        const quotes = require('../base/animequote.json');
+
+        const object = Object.keys(quotes)
+        const randomQuote = Math.floor(Math.random() * object.length)
+
         const quote = quotes[randomQuote]
 
         const embed = new Discord.MessageEmbed()
