@@ -6,7 +6,7 @@ module.exports = {
     description: "This command add role for someone",
     category: 'moderation',
     example: ['!addrole @member @role'],
-    callback({message, client}) {
+    callback({message, client, args}) {
         const permission = message.member.hasPermission("MANAGE_ROLES");
         const member = message.mentions.members.first()
 
@@ -14,8 +14,12 @@ module.exports = {
             return message.channel.send(`❌ | You don't have permission to use this command`)
         }
 
-        if(!member) {
+        if(!args[0]) {
             return message.channel.send(`❌ | Please specify someone`);
+        }
+
+        if(!member) {
+            return message.channel.send(`❌ | Cannot find a member`);
         }
 
         if(message.member.roles.highest.position < member.roles.highest.position){
