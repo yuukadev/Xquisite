@@ -2,15 +2,15 @@ const Discord = require('discord.js');
 
 module.exports = {
     name: '8ball',
-    description: '8ball command',
+    description: 'This command play with you 8ball',
     category: 'fun',
     example: ['!8ball @question'],
     callback({message, args}) {
         if(!args[0]) {
-            return message.reply('Please ask a full question');
+            return message.channel.send('❓ | Please ask a full question');
         }
 
-        let replies = ["yes.",  // Replies
+        let replies = ["yes.", 
                        "Outlook seems good.", 
                        "yus", "of course.", 
                        "Yes – definitely.", "no.", 
@@ -28,8 +28,7 @@ module.exports = {
         const randomReplies = replies[Math.floor(Math.random() * replies.length)];
 
         let embed = new Discord.MessageEmbed()
-        .setAuthor(`📜 Answer for ${message.author.username}`) // Message
-        .setColor("#1C1C1C")
+        .setAuthor(`📜 Answer for ${message.author.username}`)
         .setDescription(`🎱 ${randomReplies}`)
         .setColor('#FF00A6')
 
