@@ -7,6 +7,7 @@ config = {
 const client = new Discord.Client({
     partials: ['MESSAGE', 'REACTION']
 })
+let prefix = '!';
 
 // Emojis 
 /*
@@ -20,14 +21,14 @@ const client = new Discord.Client({
 
 // Command Handler && Welcome Command && Distube
 const CommandHandler = require("wokcommands");
-const welcome = require('./commands/others/welcome');
+//const welcome = require('./commands/others/welcome'); --- Remove the comments if you want welcome command to work
 const distube = new DisTube(client, {searchSongs: false, emitNewSongOnly: true, });
 
 client.once('ready', () => {
     console.log('Bot je uključen');
     client.user.setActivity('!help | !info');
 
-    welcome(client);
+    //welcome(client); --- This is for welcome command
 
     new CommandHandler(client, {
         commands: 'commands'
@@ -170,9 +171,4 @@ distube
         queue.volume = 100;
     });
     
-
-
-// Your Token
 client.login(process.env.BOT_TOKEN);
-
-
