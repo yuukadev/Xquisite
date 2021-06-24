@@ -9,7 +9,7 @@ module.exports = {
     callback({message}) {
         const randomanime = require('random-anime');
         const anime = randomanime.anime()
-        let member = message.mentions.users.first() || message.author
+        let member = message.author;
 
         const embed = new Discord.MessageEmbed()
         .setTitle(`Image for ${member.username}`)
