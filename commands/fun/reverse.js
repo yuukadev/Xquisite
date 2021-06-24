@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 
 module.exports = {
     name: 'reverse',
-    description: 'this command sends reversed word that you put',
+    description: "This command reverse a word you typed",
     category: 'fun',
     example: ['!reverse @word'],
     callback({message, args}) {
@@ -12,12 +12,12 @@ module.exports = {
 
         if(msg) {
             let embed = new Discord.MessageEmbed()
-            .setTitle('Reverse Word')
+            .setTitle('Reversed Word')
             .setDescription(reversedArray)
             .setColor('#FF00A6');
             message.channel.send(embed)
         } else {
-            message.channel.send('Give me something to reverse');
+            message.channel.send('❓ | Give me something to reverse');
         }
     }
 }
