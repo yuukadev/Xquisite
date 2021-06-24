@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 
 module.exports = {
     name: 'roll',
-    description: 'this command roll a dice',
+    description: 'This command roll a dice',
     category: 'fun',
     example: ['!roll'],
     callback({message}) {
