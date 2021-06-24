@@ -2,10 +2,9 @@ const Discord = require("discord.js");
 const moment = require('moment');
 module.exports = {
     name: 'serverinfo',
-    aliases: 'sinfo',
-    description: 'this command sends info about server',
+    description: 'This command sends info about server',
     category: 'info',
-    example: ['!serverinfo', /* Or */ '!sinfo'],
+    example: ['!serverinfo'],
     callback({client, message, args}) {
         let roles = message.guild.roles.cache.sort((a, b) => b.position - a.position).map(role => role.name);
         let members = message.guild.members.cache;
