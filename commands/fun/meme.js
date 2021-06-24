@@ -1,15 +1,16 @@
-const got = require('got')
-const { MessageEmbed } = require('discord.js')
+const got = require('got');
+const Discord = require('discord.js');
+
 module.exports = {
     name: 'meme',
-    description: 'this command sends random memes',
+    description: "This command sends you random memes",
     category: 'fun',
     example: ['!meme'],
     callback: ({message}) => {
-        got('https://www.reddit.com/r/memes/random/.json').then(res => { // The page that sends meme's
+        got('https://www.reddit.com/r/memes/random/.json').then(res => {
             let content = JSON.parse(res.body)
             message.channel.send(
-                new MessageEmbed()
+                new Discord.MessageEmbed()
                     .setTitle(content[0].data.children[0].data.title)
                     .setImage(content[0].data.children[0].data.url)
                     .setColor("#FF00A6")
