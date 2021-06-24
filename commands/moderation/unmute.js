@@ -1,20 +1,36 @@
 module.exports = {
-    name: 'unmute',
-    description: "this command unmute someone if they are muted",
     category: 'moderation',
-    example: ['!unmute @member'],
-    minArgs: 1,
-    syntaxError: "Please specify someone",
+    description: 'unmute command',
     callback:({client, message, args}) => {
-        if(!message.member.hasPermission("MANAGE_ROLES")) {
-            return message.channel.send("❌ | You are not allowed to use this command"); // Message for missing permission
-        }
         let member = message.mentions.members.first();
-        let mutedRole = message.guild.roles.cache.find(role => role.name === 'muted'); 
-        if(!member.roles.cache.has(mutedRole.id)) {
-            return message.channel.send(`User ${member} isn't muted`); // Message when user isn't muted
+        let mutedRole = message.guild.roles.cache.find(role => role.name === 'muted');
+        let permission = message.member.hasPermission("MANAGE_ROLES");
+
+        if(!permission) {
+            return message.channel.send("❌ | You are not allowed to use this command");
         }
+
+        if(!member) {
+            return message.channel.send(`❌ | Cannot find a member`);
+        }
+
+        if(!args[0]) {
+            return message.channel.send('❌ | Please specify someone');
+        }
+
+        if(member.id === client.user.id){
+            return message.channel.send(`huuh? who told you i was muted`)
+        }
+
+        if(message.member.roles.highest.position < member.roles.highest.position){
+            return message.channel.send(`❌ | You cannot unmute user who have higher role than you`)
+        }
+
+        if(!member.roles.cache.has(mutedRole.id)) {
+            return message.channel.send(`❌ | User ${member} isn't muted`);
+        }
+
         member.roles.remove(mutedRole);
-        message.channel.send(`User ${member} has been unmuted`); // Message when user is unmuted
+        message.channel.send(`💬 | User ${member} has been unmuted`);
     }
 }
