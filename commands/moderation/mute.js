@@ -15,13 +15,13 @@ module.exports = {
         if(!permission) {
             return message.channel.send(`❌ | You don't have permission to use this command`);
         } 
-
-        if(!member) {
-            return message.channel.send(`❌ | Cannot find a member`);
-        }
         
         if(!args[0]) {
             return message.channel.send(`❌ | Please specify someone`);
+        }
+
+        if(!member) {
+            return message.channel.send(`❌ | Cannot find a member`);
         }
 
         if(member.id === client.user.id){
