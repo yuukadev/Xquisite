@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const moment = require('moment');
 module.exports = {
     name: 'userinfo',
-    description: 'this command sends info about user',
+    description: 'This command sends info about user',
     category: 'info',
     example: ['!userinfo'],
     callback({message}) {
@@ -14,7 +14,7 @@ module.exports = {
         .setThumbnail(user.displayAvatarURL({ dynamic: true }))
         .setColor('#FF00A6')
         .addField(":busts_in_silhouette: Informations", [
-            `• **Name**: ${user}`,
+            `• **Name**: ${user.tag}`,
             `• **User ID**: ${user.id}`,
             `• **Nickname**: ${member.nickname || 'None'}`,
             `• **Is Bot**: ${user.bot}`,
