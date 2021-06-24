@@ -2,27 +2,40 @@ const Discord = require('discord.js')
 
 module.exports = {
     name: 'removerole',
-    description: "this command removerole",
+    description: "This command remove's role for someone",
     category: 'moderation',
     example: ['!removerole @member @role'],
-    syntaxError: 'Please specify someone',
-    callback({message}) {
+    callback({message, client}) {
+        const permission = message.member.hasPermission("MANAGE_ROLES");
         const member = message.mentions.members.first()
 
-        if(!member) {
-            return message.channel.send(`❌ | Please specify someone`); // Message when no one is specified
+        if(!permission) {
+            return message.channel.send(`❌ | You don't have permission to use this command`)
         }
-        
+
+        if(!member) {
+            return message.channel.send(`❌ | Please specify someone`);
+        }
+
+        if(message.member.roles.highest.position < member.roles.highest.position){
+            return message.channel.send(`❌ | You cannot remove role to user who have higher role than you...`)
+        }
+
+        if(message.member.roles.highest.position > message.guild.members.resolve(client.user).roles.highest.position){
+            return message.channel.send(`❌ | The roles cannot be removed because they are higher than or equal to my highest role`);
+        }
+
         let role = message.mentions.roles.first()
 
         if(!role) {
-            return message.channel.send(`❌ | There is no role with that name `); // Message when there is no role
+            return message.channel.send(`❌ | There is no role with that name `);
         }
 
-        if(role) {
-            member.roles.remove(role);
-            message.channel.send(`Role ${role} has been removed from ${member}`); // Message when role is removed
+        if(!member.roles.cache.has(role.id)) {
+            return message.channel.send(`❌ | That person does not have that role`);
         }
-    
+
+        member.roles.remove(role);
+        message.channel.send(`:gear: | Role ${role} has been removed from ${member}`);    
     }
 }
