@@ -33,7 +33,7 @@ module.exports = {
         const randomImage = imagesPat[Math.floor(Math.random() * imagesPat.length)];
         if(member){
             let embed = new Discord.MessageEmbed()
-            .setTitle(`Aww you patted ${member.username}! :blush:`)
+            .setTitle(`Aww you patted ${member.username}! 😚`)
             .setColor('#FF00A6')
             .setImage(randomImage)
             .setTimestamp()
