@@ -13,7 +13,7 @@ module.exports = {
         const object = Object.keys(quotes)
         const randomQuote = Math.floor(Math.random() * object.length)
 
-        const quote = quotes[randomQuote];
+        const quote = quotes[randomQuote]
 
         const embed = new Discord.MessageEmbed()
         .setAuthor(`📜 Quote for ${member.username}`)
