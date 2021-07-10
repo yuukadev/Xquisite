@@ -73,7 +73,7 @@ module.exports = {
         { name: '✨ Score', value: `${info.results[0].score}`, inline: true},
         { name: '🖥️ Type', value: `${info.results[0].type}`, inline: true},
         { name: '💬 Rating', value: `${info.results[0].rated}`, inline: true},
-        { name: '🔩 Episodes', value: `${info.results[0].episodes}`, inline: true},
+        { name: '🔩 Episodes', value: `${info.results[0].episodes || 'Airing'}`, inline: true},
     )
     .setImage(`${info.results[0].image_url}`)
     .setTimestamp()
