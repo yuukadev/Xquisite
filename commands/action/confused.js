@@ -17,7 +17,7 @@ module.exports = {
         const randomImage = imagesConfused[Math.floor(Math.random() * imagesConfused.length)];
         if(member){
             let embed = new Discord.MessageEmbed()
-            .setTitle(`Hmmm ${member.username} just confused ${message.author.username} :confused:`)
+            .setTitle(`Hmmm ${member.username} just confused ${message.author.username} 😕`)
             .setColor('#FF00A6')
             .setImage(randomImage)
             .setTimestamp()
