@@ -26,7 +26,7 @@ module.exports = {
         const randomImage = imagesPout[Math.floor(Math.random() * imagesPout.length)];
         if(member){
             let embed = new Discord.MessageEmbed()
-            .setTitle(`${message.author.username} seems to pouts at ${member.username} :pleading_face:`)
+            .setTitle(`${message.author.username} seems to pouts at ${member.username} 🥺`)
             .setColor('#FF00A6')
             .setImage(randomImage)
             .setTimestamp()
