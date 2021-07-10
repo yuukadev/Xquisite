@@ -28,7 +28,7 @@ module.exports = {
         const randomImage = imagesAngry[Math.floor(Math.random() * imagesAngry.length)];
         if(member){
             let embed = new Discord.MessageEmbed()
-            .setTitle(`Watch out ${member.username} maybe ${message.author.username} is angry! :face_with_symbols_over_mouth:`)
+            .setTitle(`Watch out ${member.username} maybe ${message.author.username} is angry! 🤬`)
             .setColor('#FF00A6')
             .setImage(randomImage)
             .setTimestamp()
