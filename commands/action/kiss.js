@@ -29,7 +29,7 @@ module.exports = {
         const randomImage = imagesKiss[Math.floor(Math.random() * imagesKiss.length)];
         if(member){
             let embed = new Discord.MessageEmbed()
-            .setTitle(`You kissed ${member.username}! :heart_eyes: `)
+            .setTitle(`You kissed ${member.username}! 😍`)
             .setColor('#FF00A6')
             .setImage(randomImage)
             .setTimestamp()
