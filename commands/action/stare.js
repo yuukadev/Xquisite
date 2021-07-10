@@ -25,7 +25,7 @@ module.exports = {
         const randomImage = imagesStare[Math.floor(Math.random() * imagesStare.length)];
         if(member){
             let embed = new Discord.MessageEmbed()
-            .setTitle(`Looks like ${message.author.username} is staring at ${member.username} :eyes:`)
+            .setTitle(`Looks like ${message.author.username} is staring at ${member.username} 👀`)
             .setColor('#FF00A6')
             .setImage(randomImage)
             .setTimestamp()
