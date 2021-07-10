@@ -31,7 +31,7 @@ module.exports = {
         const randomImage = imagesBlush[Math.floor(Math.random() * imagesBlush.length)];
         if(member){
             let embed = new Discord.MessageEmbed()
-            .setTitle(`${message.author.username} blushed at ${member.username} :flushed:`)
+            .setTitle(`${message.author.username} blushed at ${member.username} 😳`)
             .setColor('#FF00A6')
             .setImage(randomImage)
             .setTimestamp()
