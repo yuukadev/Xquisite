@@ -38,7 +38,7 @@ module.exports = {
         const randomImage = imagesSlap[Math.floor(Math.random() * imagesSlap.length)];
         if(member){
             let embed = new Discord.MessageEmbed()
-            .setTitle(`Ouch you slapped ${member.username}! :persevere:`)
+            .setTitle(`Ouch you slapped ${member.username}! 😣`)
             .setColor('#FF00A6')
             .setImage(randomImage)
             .setTimestamp()
