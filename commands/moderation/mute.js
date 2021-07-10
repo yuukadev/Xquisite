@@ -60,3 +60,4 @@ module.exports = {
         message.channel.send(`:mute: | User ${member} has been muted for the following reason: ${reason}`)
     }
 }
+
