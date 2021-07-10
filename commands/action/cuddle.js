@@ -21,7 +21,7 @@ module.exports = {
         const randomImage = imagesCuddle[Math.floor(Math.random() * imagesCuddle.length)];
         if(member){
             let embed = new Discord.MessageEmbed()
-            .setTitle(`That's cute ${message.author.username} is cuddling with ${member.username} :relaxed:`)
+            .setTitle(`That's cute ${message.author.username} is cuddling with ${member.username} 😊`)
             .setColor('#FF00A6')
             .setImage(randomImage)
             .setTimestamp()
