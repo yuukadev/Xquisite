@@ -31,7 +31,7 @@ module.exports = {
         const randomImage = imagesPunch[Math.floor(Math.random() * imagesPunch.length)];
         if(member){
             let embed = new Discord.MessageEmbed()
-            .setTitle(`You punched ${member.username}! :rage:`)
+            .setTitle(`You punched ${member.username}! 😡`)
             .setColor('#FF00A6')
             .setImage(randomImage)
             .setTimestamp()
