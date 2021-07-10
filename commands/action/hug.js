@@ -36,7 +36,7 @@ module.exports = {
         const randomImage = imagesHug[Math.floor(Math.random() * imagesHug.length)];
         if(member){
             let embed = new Discord.MessageEmbed()
-            .setTitle(`You hugged ${member.username}! :smiling_face_with_3_hearts:`)
+            .setTitle(`You hugged ${member.username}! 🥰`)
             .setColor('#FF00A6')
             .setImage(randomImage)
             .setTimestamp()
