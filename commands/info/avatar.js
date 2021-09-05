@@ -5,7 +5,7 @@ module.exports = {
     category: 'info',
     example: ['!avatar', /* Or */ '!avatar @member'],
     callback({message}) {
-        let member = message.mentions.users.first() || message.author
+        let member = message.mentions.users.first() || message.author;
         let avatar = member.displayAvatarURL({dynamic: true, size: 1024})
 
         const embed = new Discord.MessageEmbed()
