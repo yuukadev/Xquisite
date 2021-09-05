@@ -2,7 +2,7 @@ require('dotenv').config();
 const Discord = require('discord.js'),
 DisTube = require('distube'),
 config = {
-    prefix: "!"
+    prefix: "x!"
 };
 const client = new Discord.Client({
     partials: ['MESSAGE', 'REACTION']
@@ -26,14 +26,23 @@ const distube = new DisTube(client, {searchSongs: false, emitNewSongOnly: true, 
 
 client.once('ready', () => {
     console.log('Bot je uključen');
-    client.user.setActivity('!help | !info');
+    client.user.setActivity('x!help | x!info');
 
     //welcome(client); --- This is for welcome command
 
     new CommandHandler(client, {
-        commands: 'commands'
-    });
-});
+        commandsDir: 'commands',
+        showWarns: true,
+        disabledDefaultCommands: [
+            'command',
+            'help',
+            'language',
+            'requiredrole'
+        ]
+    })
+       
+    .setDefaultPrefix('x!')
+})
 
 // Distube Commands 
 client.on("message", async (message) => {
