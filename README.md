@@ -42,60 +42,61 @@ You need to have :
 These are some of the current commands provided by the bot
 
 #### Moderation Commands
-* ```!ban - Ban member```
-* ```!kick - Kick member```
-* ```!mute - Mute member```
-* ```!unmute - Unmute member```
-* ```!clear - Clear messages```
-* ```!addrole - Addrole for someone```
-* ```!removerole - Remove role```
+* ```x!ban - Ban member```
+* ```x!kick - Kick member```
+* ```x!mute - Mute member```
+* ```x!unmute - Unmute member```
+* ```x!clear - Clear messages```
+* ```x!addrole - Addrole for someone```
+* ```x!removerole - Remove role```
 
 #### Fun Commands
-* ```!meme - Sends random meme```
-* ```!quote - Sends random quote```
-* ```!coinflip - Play game coinflip```
-* ```!reverse - Reverse a word```
-* ```!roll - Roll a dice```
-* ```!8ball - Plays 8ball game```
-* ```!howgay - How much are you gay```
-* ```!color - Send a random hex color```
+* ```x!meme - Sends random meme```
+* ```x!quote - Sends random quote```
+* ```x!coinflip - Play game coinflip```
+* ```x!reverse - Reverse a word```
+* ```x!roll - Roll a dice```
+* ```x!8ball - Plays 8ball game```
+* ```x!howgay - How much are you gay```
+* ```x!color - Send a random hex color```
 
 #### Anime Commands
-* ```!anime - Search for anime```
-* ```!manga - Search for manga```
-* ```!ranime - Sends random image of anime```
-* ```!qanime - Sends random anime quote```
+* ```x!anime - Search for anime```
+* ```x!manga - Search for manga```
+* ```x!ranime - Sends random image of anime```
+* ```x!qanime - Sends random anime quote```
 
 #### Action Commands
-* ```!hug - Sends gif of hugging```
-* ```!punch - Sends gif of punching```
-* ```!slap - Sends gif of slaping```
-* ```!pat - Sends gif of patting```
-* ```!pout - Sends gif of pouting```
-* ```!blush - Sends gif of blushing```
-* ```!kiss - Sends gif of kissing```
-* ```!stare - Sends gif of staring```
-* ```!angry - Sends gif of anger```
-* ```!cuddle - Sends gif of cuddling```
-* ```!confused - Sends gif of confusing```
+* ```x!hug - Sends gif of hugging```
+* ```x!punch - Sends gif of punching```
+* ```x!slap - Sends gif of slaping```
+* ```x!pat - Sends gif of patting```
+* ```x!pout - Sends gif of pouting```
+* ```x!blush - Sends gif of blushing```
+* ```x!kiss - Sends gif of kissing```
+* ```x!stare - Sends gif of staring```
+* ```x!angry - Sends gif of anger```
+* ```x!cuddle - Sends gif of cuddling```
+* ```x!confused - Sends gif of confusing```
+* ```x!bite - Sends gif of bitting```
 
 #### Info Commands
-* ```!help - Sends help embed about commands```
-* ```!info - Sends info about bot```
-* ```!avatar - Sends avatar```
-* ```!serverinfo - Sends information of server```
-* ```!userinfo - Sends information of user```
+* ```x!help - Sends help embed about commands```
+* ```x!info - Sends info about bot```
+* ```x!avatar - Sends avatar```
+* ```x!serverinfo - Sends information of server```
+* ```x!userinfo - Sends information of user```
 
 #### Music Commands
-* ```!play - Plays a song```
-* ```!skip - Skips a song```
-* ```!pause - Pause a song```
-* ```!resume - Resume a paused song```
-* ```!loop - Toggles loop```
-* ```!unloop - Disable loop```
-* ```!jump - Jump to the song number in the queue```
-* ```!queue - Shows the queue of songs```
-* ```!leave - Disconnect a player```
+* ```x!play - Plays a song```
+* ```x!skip - Skips a song```
+* ```x!pause - Pause a song```
+* ```x!resume - Resume a paused song```
+* ```x!loop - Toggles loop```
+* ```x!unloop - Disable loop```
+* ```x!jump - Jump to the song number in the queue```
+* ```x!queue - Shows the queue of songs```
+* ```x!leave - Disconnect a player```
 
 # Contributing
 * Fork the repository
