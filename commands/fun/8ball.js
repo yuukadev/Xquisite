@@ -32,6 +32,6 @@ module.exports = {
         .setDescription(`🎱 ${randomReplies}`)
         .setColor('#FF00A6')
 
-        message.channel.send(embed)
+        message.channel.send(embed);
     }
 }
