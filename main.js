@@ -32,7 +32,7 @@ client.once('ready', () => {
 
     new CommandHandler(client, {
         commandsDir: 'commands',
-        showWarns: true,
+        showWarns: false,
         disabledDefaultCommands: [
             'command',
             'help',
@@ -114,6 +114,9 @@ client.on("message", async (message) => {
     }
 
     if(command == "loop") {
+        if(!message.member.voice.channel) {
+            return message.channel.send('❌ | You must be in a voice channel to use this command');
+        }
         const queue = distube.getQueue(message)
         if (!queue) {
             return message.channel.send('❌ | There is nothing played right now!');
@@ -126,6 +129,9 @@ client.on("message", async (message) => {
     }
 
     if(command == 'unloop') {
+        if(!message.member.voice.channel) {
+            return message.channel.send('❌ | You must be in a voice channel to use this command');
+        }
         const queue = distube.getQueue(message)
         if (!queue) {
             return message.channel.send('❌ | There is nothing played right now!');
