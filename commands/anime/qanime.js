@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const fetch = require('node-fetch');
 
 module.exports = {
     name: 'qanime',
@@ -7,18 +8,21 @@ module.exports = {
     category: 'anime',
     example: ['!qanime'],
     callback({message}) {
-        const member = message.author;
-        const quotes = require('../base/animequote.json');
+        let animeQuote = async () => {
+            try {
+                let res = await fetch("https://animechan.vercel.app/api/random");
+                let random = await res.json();
 
-        const object = Object.keys(quotes)
-        const randomQuote = Math.floor(Math.random() * object.length)
+                const embed = new Discord.MessageEmbed()
+                    .setAuthor(`📜 Character - ${random.character} | 📜 Anime - ${random.anime}`)
+                    .setColor('#FF00A6')
+                    .setDescription(random.quote)
 
-        const quote = quotes[randomQuote]
-
-        const embed = new Discord.MessageEmbed()
-        .setAuthor(`📜 Quote for ${member.username}`)
-        .setColor('#FF00A6')
-        .setDescription(`${quote}`)
-        message.channel.send(embed);
+                message.channel.send(embed);
+            }catch(err) {
+                message.channel.send('there is something wrong :(');
+            }
+        }
+        animeQuote();
     }
 }
