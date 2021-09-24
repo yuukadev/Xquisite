@@ -68,12 +68,12 @@ module.exports = {
     .setURL(`${info.results[0].url}`)
     .setDescription(`${info.results[0].synopsis}`)
     .addFields(
-        { name: ':calendar: Release Date', value: `${info.results[0].start_date}`, inline: true}, 
-        { name: ':calendar_spiral: End Date', value: `${info.results[0].end_date || 'Airing'}`, inline: true},
+        { name: ':calendar: Release Date', value: `${info.results[0].start_date  || 'Not yet aired'}`, inline: true}, 
+        { name: ':calendar_spiral: End Date', value: `${info.results[0].end_date || 'Unknown' || 'Not yet aired'}`, inline: true},
         { name: '✨ Score', value: `${info.results[0].score}`, inline: true},
         { name: '🖥️ Type', value: `${info.results[0].type}`, inline: true},
-        { name: '💬 Rating', value: `${info.results[0].rated}`, inline: true},
-        { name: '🔩 Episodes', value: `${info.results[0].episodes || 'Airing'}`, inline: true},
+        { name: '💬 Rating', value: `${info.results[0].rated || 'None'}`, inline: true},
+        { name: '🔩 Episodes', value: `${info.results[0].episodes || 'Unknown'}`, inline: true},
     )
     .setImage(`${info.results[0].image_url}`)
     .setTimestamp()
