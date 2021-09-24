@@ -87,17 +87,6 @@ These are some of the current commands provided by the bot
 * ```x!serverinfo - Sends information of server```
 * ```x!userinfo - Sends information of user```
 
-#### Music Commands
-* ```x!play - Plays a song```
-* ```x!skip - Skips a song```
-* ```x!pause - Pause a song```
-* ```x!resume - Resume a paused song```
-* ```x!loop - Toggles loop```
-* ```x!unloop - Disable loop```
-* ```x!jump - Jump to the song number in the queue```
-* ```x!queue - Shows the queue of songs```
-* ```x!leave - Disconnect a player```
-
 # Contributing
 * Fork the repository
 * Clone your fork: git clone https://github.com/your-username/discordjs-bot.git
