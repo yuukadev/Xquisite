@@ -14,7 +14,7 @@ const client = new Discord.Client({
 ⏹️
 */
 
-// Command Handler && Welcome Command && Distube
+// Command Handler && Welcome Command
 const CommandHandler = require("wokcommands");
 //const welcome = require('./commands/others/welcome'); --- Remove the comments if you want welcome command to work
 
