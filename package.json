@@ -16,7 +16,7 @@
     "canvacord": "^5.2.3",
     "discord.js": "^12.5.3",
     "distube": "^2.8.18",
-    "dotenv": "^9.0.1",
+    "dotenv": "^9.0.2",
     "ffmpeg": "0.0.4",
     "fluent-ffmpeg": "^2.1.2",
     "got": "^11.8.2",
