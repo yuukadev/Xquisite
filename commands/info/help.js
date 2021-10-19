@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+
 module.exports = {
     name: 'help',
     description: "this command sends list of bot commands",
@@ -9,7 +10,7 @@ module.exports = {
         .setColor('#FF00A6')
         .setTitle('Xquisite Help')
         .setAuthor(message.author.username , message.author.avatarURL({dynamic: true}))
-        .setDescription("Here you can see all the commands that the bot provides. For more information visit our [Website](https://xquisite.netlify.app/)") 
+        .setDescription("Here you can see all the commands that the bot provides, for more information you can visit our [Website](https://xquisite.netlify.app/)") 
         .addField('Moderation Commands', 
                  ['\`x!ban - Ban member\`',
                  '\`x!kick - Kick member\`',
@@ -27,7 +28,8 @@ module.exports = {
                  '\`x!roll - Roll a dice\`', 
                  '\`x!8ball - Plays 8ball game\`', 
                  '\`x!howgay - How much are you gay\`', 
-                 '\`x!color - Send a random hex color\`'], 
+                 '\`x!color - Send a random hex color\`',
+                 '\`x!panda - Sends a random picture of panda\`'], 
                  false)
         .addField("Anime Commands", 
                  ['\`x!anime - Search anime\`', 
