@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+
 module.exports = {
     name: 'avatar',
     description: 'This command sends image of your discord avatar',
