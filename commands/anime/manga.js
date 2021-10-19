@@ -25,8 +25,8 @@ module.exports = {
     .setURL(`${info.results[0].url}`)
     .setDescription(`${info.results[0].synopsis}`)
     .addFields(
-        { name: ':calendar: Release Date', value: `${info.results[0].start_date || 'Not yet aired'}`, inline: true}, 
-        { name: ':calendar_spiral: End Date', value: `${info.results[0].end_date || 'Airing'}`, inline: true},
+        { name: '📅 Release Date', value: `${info.results[0].start_date || 'Not yet aired'}`, inline: true}, 
+        { name: '🗓️ End Date', value: `${info.results[0].end_date || 'Airing'}`, inline: true},
         { name: '✨ Score', value: `${info.results[0].score}`, inline: true},
         { name: '🖥️ Type', value: `${info.results[0].type}`, inline: true},
     )
