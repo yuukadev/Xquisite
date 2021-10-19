@@ -1,5 +1,6 @@
-const Discord = require("discord.js");
+const Discord = require('discord.js');
 const moment = require('moment');
+
 module.exports = {
     name: 'userinfo',
     description: 'This command sends info about user',
@@ -17,7 +18,7 @@ module.exports = {
             `• **Name**: ${user.tag}`,
             `• **User ID**: ${user.id}`,
             `• **Nickname**: ${member.nickname || 'None'}`,
-            `• **Is Bot**: ${user.bot}`,
+            `• **Is Bot**: ${user.bot ? 'True' : 'False'}`,
             `• **Created At**: ${moment(member.user.createdTimestamp).format('LL LTS')}`,
             `• **Joined At**: ${moment(member.joinedAt).format('LL LTS')}`,
         ])
