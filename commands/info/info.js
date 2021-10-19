@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+
 module.exports = {
     name: 'info',
     description: 'This command sends info about bot',
