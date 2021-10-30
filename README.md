@@ -59,6 +59,7 @@ These are some of the current commands provided by the bot
 * ```x!8ball - Plays 8ball game```
 * ```x!howgay - How much are you gay```
 * ```x!color - Send a random hex color```
+* ```x!panda - Sends a random picture of panda```
 
 #### Anime Commands
 * ```x!anime - Search for anime```
