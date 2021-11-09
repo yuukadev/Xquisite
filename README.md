@@ -40,8 +40,9 @@ You need to have :
 
 ## Features
 These are some of the current commands provided by the bot
+You can always check our [page](https://yuukadev.gitbook.io/xquisite-discord-bot/) for more detailed information.
 
-#### Moderation Commands
+#### 💻Moderation Commands
 * ```x!ban - Ban member```
 * ```x!kick - Kick member```
 * ```x!mute - Mute member```
@@ -50,7 +51,7 @@ These are some of the current commands provided by the bot
 * ```x!addrole - Addrole for someone```
 * ```x!removerole - Remove role```
 
-#### Fun Commands
+#### ✨Fun Commands
 * ```x!meme - Sends random meme```
 * ```x!quote - Sends random quote```
 * ```x!coinflip - Play game coinflip```
@@ -60,14 +61,16 @@ These are some of the current commands provided by the bot
 * ```x!howgay - How much are you gay```
 * ```x!color - Send a random hex color```
 * ```x!panda - Sends a random picture of panda```
+* ```x!joke - Sends a random joke```
+* ```x!advice - Sends you random advice```
 
-#### Anime Commands
+#### 🎞️Anime Commands
 * ```x!anime - Search for anime```
 * ```x!manga - Search for manga```
 * ```x!ranime - Sends random image of anime```
 * ```x!qanime - Sends random anime quote```
 
-#### Action Commands
+#### ❄️Action Commands
 * ```x!hug - Sends gif of hugging```
 * ```x!punch - Sends gif of punching```
 * ```x!slap - Sends gif of slaping```
@@ -79,9 +82,13 @@ These are some of the current commands provided by the bot
 * ```x!angry - Sends gif of anger```
 * ```x!cuddle - Sends gif of cuddling```
 * ```x!confused - Sends gif of confusing```
-* ```x!bite - Sends gif of bitting```
 
-#### Info Commands
+#### 🗺️Image Commands
+* ```x!trigger - Sends user's avatar triggered```
+* ```x!wanted - Sends user's avatar wanted```
+* ```x!shit - You just stepped on shit...```
+
+#### 📜Info Commands
 * ```x!help - Sends help embed about commands```
 * ```x!info - Sends info about bot```
 * ```x!avatar - Sends avatar```
