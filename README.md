@@ -87,6 +87,15 @@ You can always check our [page](https://yuukadev.gitbook.io/xquisite-discord-bot
 * ```x!trigger - Sends user's avatar triggered```
 * ```x!wanted - Sends user's avatar wanted```
 * ```x!shit - You just stepped on shit...```
+* ```x!spank - Sends spanked meme```
+* ```x!affect - Sends no, it doesn't affect my baby meme```
+* ```x!invert - Sends inverted color of image```
+* ```x!gay - Sends user avatar in rainbow color```
+* ```x!blur - Sends avatar's blur image```
+* ```x!hitler - Sends worse than hitler meme```
+* ```x!rip - Sends user's avatar over a gravestone```
+* ```x!trash - Well this is obvious```
+* ```x!wasted - You just got wasted```
 
 #### 📜Info Commands
 * ```x!help - Sends help embed about commands```
