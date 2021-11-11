@@ -1,7 +1,7 @@
 {
   "name": "discord.js-main",
   "version": "1.0.0",
-  "description": "",
+  "description": "Xquisite is a multipurpose discord bot",
   "main": "main.js",
   "scripts": {
     "start": "node main.js",
@@ -14,6 +14,7 @@
     "@discordjs/opus": "^0.5.0",
     "axios": "^0.21.4",
     "canvacord": "^5.2.3",
+    "discord-image-generation": "^1.4.9",
     "discord.js": "^12.5.3",
     "distube": "^2.8.18",
     "dotenv": "^9.0.2",
