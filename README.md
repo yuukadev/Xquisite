@@ -1,4 +1,4 @@
-<img src="img/wallpaper.jpg">
+<img src="logo.jpg">
 
 # Discord Bot
 This bot is made purely for fun, the goal of this bot is to improve someone's server experience,it was built using [discord.js](https://discord.js.org/#/)
