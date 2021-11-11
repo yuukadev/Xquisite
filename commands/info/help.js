@@ -37,6 +37,7 @@ module.exports = {
           "`x!howgay - How much are you gay`",
           "`x!color - Send a random hex color`",
           "`x!panda - Sends a random picture of panda`",
+          "`x!joke - Sends a random joke`",
         ],
         false
       )
@@ -65,6 +66,24 @@ module.exports = {
           "`x!cuddle - Sends gif of cuddling`",
           "`x!confused - Sends gif of confusing`",
           "`x!bite - Sends gif of bitting`",
+        ],
+        false
+      )
+      .addField(
+        "Image Commands 🗺️",
+        [
+          "`x!trigger - Sends user's avatar triggered`",
+          "`x!wanted - Sends user's avatar wanted`",
+          "`x!shit - You just stepped on shit...`",
+          "`x!spank - Sends spanked meme`",
+          "`x!affect - Sends no, it doesn't affect my baby meme`",
+          "`x!invert - Sends inverted color of image`",
+          "`x!gay - Sends user avatar in rainbow color`",
+          "`x!blur - Sends avatar's blur image`",
+          "`x!hitler - Sends worse than hitler meme`",
+          "`x!rip - Sends user's avatar over a gravestone`",
+          "`x!trash - Well this is obvious`",
+          "`x!wasted - You just got wasted`",
         ],
         false
       )

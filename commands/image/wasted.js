@@ -1,11 +1,11 @@
 const Discord = require("discord.js");
-const canvacord = require("canvacord");
+const { Canvas } = require("canvacord");
 
 module.exports = {
-  name: "trigger",
-  description: "This command sends a triggered user's avatar gif",
+  name: "wasted",
+  description: "This command sends wasted user avatar",
   category: "image",
-  example: ["!trigger" || "!trigger @member"],
+  example: ["!wasted" || "wasted @member"],
   callback: async ({ message }) => {
     try {
       let member = message.mentions.users.first() || message.author;
@@ -15,8 +15,8 @@ module.exports = {
         size: 1024,
       });
 
-      let image = await canvacord.Canvas.trigger(avatar);
-      let attachment = new Discord.MessageAttachment(image, "triggered.gif");
+      let image = await Canvas.wasted(avatar);
+      let attachment = new Discord.MessageAttachment(image, "image.gif");
 
       return message.reply(attachment);
     } catch (err) {
