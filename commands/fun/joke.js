@@ -1,22 +1,19 @@
-/*
 const Discord = require("discord.js");
 const fetch = require("node-fetch");
 
 module.exports = {
   name: "joke",
-  description: "This command sends random joke",
+  description: "This command sends you random joke",
   category: "fun",
   example: ["!joke"],
-  calback({ message }) {
-    const getJokes = async () => {
-      let member = message.author;
-      let res = await fetch("https://api.jokes.one/joke/random");
-      let random = await res.json();
+  callback: async ({ message }) => {
+    const res = await fetch("https://v2.jokeapi.dev/joke/Any");
+    const random = await res.json();
 
-      
-    };
-
-    getJokes();
+    let embed = new Discord.MessageEmbed()
+      .setTitle(random.setup || "There was an error contact the support")
+      .setColor("#FF00A6")
+      .setDescription(random.delivery || "Error");
+    message.reply(embed);
   },
 };
-*/
