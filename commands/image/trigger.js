@@ -17,7 +17,7 @@ module.exports = {
 
       let image = await canvacord.Canvas.trigger(avatar);
       let attachment = new Discord.MessageAttachment(image, "triggered.gif");
-
+      
       return message.reply(attachment);
     } catch (err) {
       return message.reply(`There was an error ${err}`);
