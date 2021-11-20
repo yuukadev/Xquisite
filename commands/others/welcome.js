@@ -1,6 +1,5 @@
 // This commands sends welcome message for your server
 
-
 /* Remove the comment if you want this command to work
 
 module.exports = (client) => {
