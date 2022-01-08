@@ -1,6 +1,7 @@
 <img src="logo.jpg">
 
-# Discord Bot
+## ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) The bot is currently inactive but will come back! | Xquisite
+
 This bot is made purely for fun, the goal of this bot is to improve someone's server experience,it was built using [discord.js](https://discord.js.org/#/)
 
 [Invite Xquisite](https://discord.com/api/oauth2/authorize?client_id=840968738122498070&permissions=8&scope=bot)
