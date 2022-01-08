@@ -6,7 +6,7 @@ module.exports = {
   category: "moderation",
   example: ["!removerole @member @role"],
   callback({ message, client, args }) {
-    const permission = message.member.hasPermission("MANAGE_ROLES");
+    const permission = message.member.permissions.has("MANAGE_ROLES");
     const member = message.mentions.members.first();
 
     if (!permission) {
