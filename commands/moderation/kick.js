@@ -2,7 +2,7 @@ module.exports = {
   name: "kick",
   description: "This command kick's someone",
   category: "moderation",
-  example: ["!kick @member"],
+  example: ["x!kick @member"],
   callback: ({ message, args, client }) => {
     const permission = message.member.hasPermission("KICK_MEMBERS");
     const member = message.mentions.members.first();
