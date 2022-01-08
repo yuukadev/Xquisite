@@ -5,7 +5,7 @@ module.exports = {
   name: "userinfo",
   description: "This command sends info about user",
   category: "info",
-  example: ["!userinfo"],
+  example: ["x!userinfo"],
   callback({ message }) {
     const user = message.mentions.users.first() || message.author;
     const member = message.guild.members.cache.get(user.id);
@@ -14,16 +14,19 @@ module.exports = {
       .setTitle(`User Information - ${user.username}`)
       .setThumbnail(user.displayAvatarURL({ dynamic: true }))
       .setColor("#FF00A6")
-      .addField(":busts_in_silhouette: Informations", [
-        `• **Name**: ${user.tag}`,
-        `• **User ID**: ${user.id}`,
-        `• **Nickname**: ${member.nickname || "None"}`,
-        `• **Is Bot**: ${user.bot ? "True" : "False"}`,
-        `• **Created At**: ${moment(member.user.createdTimestamp).format(
-          "LL LTS"
-        )}`,
-        `• **Joined At**: ${moment(member.joinedAt).format("LL LTS")}`,
-      ]);
-    message.channel.send(embed);
+      .addField(
+        ":busts_in_silhouette: Informations",
+        [
+          `• **Name**: ${user.tag}`,
+          `• **User ID**: ${user.id}`,
+          `• **Nickname**: ${member.nickname || "None"}`,
+          `• **Is Bot**: ${user.bot ? "True" : "False"}`,
+          `• **Created At**: ${moment(member.user.createdTimestamp).format(
+            "LL LTS"
+          )}`,
+          `• **Joined At**: ${moment(member.joinedAt).format("LL LTS")}`,
+        ].join("\n")
+      );
+    message.channel.send({ embeds: [embed] });
   },
 };
