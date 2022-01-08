@@ -5,7 +5,7 @@ module.exports = {
   name: "advice",
   description: "This command sends you random advice",
   category: "fun",
-  example: ["!advice"],
+  example: ["x!advice"],
   callback: async ({ message }) => {
     try {
       let res = await fetch("https://api.adviceslip.com/advice");
@@ -16,7 +16,7 @@ module.exports = {
         .setColor("#FF00A6")
         .setDescription(random.slip.advice);
 
-      message.channel.send(embed);
+      message.channel.send({ embeds: [embed] });
     } catch (err) {
       message.channel.send("there is something wrong :(");
     }

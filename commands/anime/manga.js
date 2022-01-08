@@ -7,7 +7,7 @@ module.exports = {
   aliases: "mangasearch",
   description: "This command search for manga you typed",
   category: "anime",
-  example: ["!manga @manganame"],
+  example: ["x!manga @manganame"],
   callback({ message, args }) {
     let member = message.author;
 

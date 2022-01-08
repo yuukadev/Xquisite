@@ -5,101 +5,49 @@ module.exports = {
   description: "this command sends list of bot commands",
   category: "info",
   example: ["x!help"],
-  callback({ message }) {
+  callback: ({ message }) => {
     const embed = new Discord.MessageEmbed()
       .setColor("#FF00A6")
       .setAuthor("Xquisite Help", message.author.avatarURL({ dynamic: true }))
       .setDescription(
         "For more info on a command use `x!help <name>` You can always check our [page](https://yuukadev.gitbook.io/xquisite-discord-bot/) for more detailed information."
       )
-      .addField(
-        "Moderation Commands ⚙️",
-        [
-          "`x!ban - Ban member`",
-          "`x!kick - Kick member`",
-          "`x!mute - Mute member`",
-          "`x!unmute - Unmute member`",
-          "`x!clear - Clear messages`",
-          "`x!addrole - Addrole for member`",
-          "`x!removerole - Remove role`",
-        ],
-        false
-      )
-      .addField(
-        "Fun Commands 🎉",
-        [
-          "`x!meme - Sends meme`",
-          "`x!quote - Sends quote`",
-          "`x!coinflip - Play game coinflip`",
-          "`x!reverse - Reverse a word`",
-          "`x!roll - Roll a dice`",
-          "`x!8ball - Plays 8ball game`",
-          "`x!howgay - How much are you gay`",
-          "`x!color - Send a random hex color`",
-          "`x!panda - Sends a random picture of panda`",
-          "`x!joke - Sends a random joke`",
-        ],
-        false
-      )
-      .addField(
-        "Anime Commands ✨",
-        [
-          "`x!anime - Search anime`",
-          "`x!manga - Search manga`",
-          "`x!ranime - Sends random image of anime`",
-          "`x!qanime - Sends random anime quote`",
-        ],
-        false
-      )
-      .addField(
-        "Action Commands 🎬",
-        [
-          "`x!hug - Sends gif of hugging`",
-          "`x!punch - Sends gif of punching`",
-          "`x!slap - Sends gif of slaping`",
-          "`x!pat - Sends gif of patting`",
-          "`x!pout - Sends gif of pouting`",
-          "`x!blush - Sends gif of blushing`",
-          "`x!kiss - Sends gif of kissing`",
-          "`x!stare - Sends gif of staring`",
-          "`x!angry - Sends gif of anger`",
-          "`x!cuddle - Sends gif of cuddling`",
-          "`x!confused - Sends gif of confusing`",
-          "`x!bite - Sends gif of bitting`",
-        ],
-        false
-      )
-      .addField(
-        "Image Commands 🗺️",
-        [
-          "`x!trigger - Sends user's avatar triggered`",
-          "`x!wanted - Sends user's avatar wanted`",
-          "`x!shit - You just stepped on shit...`",
-          "`x!spank - Sends spanked meme`",
-          "`x!affect - Sends no, it doesn't affect my baby meme`",
-          "`x!invert - Sends inverted color of image`",
-          "`x!gay - Sends user avatar in rainbow color`",
-          "`x!blur - Sends avatar's blur image`",
-          "`x!hitler - Sends worse than hitler meme`",
-          "`x!rip - Sends user's avatar over a gravestone`",
-          "`x!trash - Well this is obvious`",
-          "`x!wasted - You just got wasted`",
-        ],
-        false
-      )
-      .addField(
-        "Info Commands 📜",
-        [
-          "`x!help - Sends help embed about commands`",
-          "`x!info - Sends info about bot`",
-          "`x!avatar - Sends avatar`",
-          "`x!userinfo - Sends information about a user`",
-          "`x!serverinfo - Sends information about a server`",
-        ],
-        false
-      )
+      .addFields({
+        name: "Moderation Commands ⚙️",
+        value:
+          "`x!ban` `x!kick` `x!mute` `x!unmute` `x!clear` `x!addrole` `x!removerole`",
+        inline: false,
+      })
+      .addFields({
+        name: "Fun Commands 🎉",
+        value:
+          "`x!meme` `x!quote` `x!coinflip` `x!reverse` `x!roll` `x!8ball` `x!howgay` `x!color` `x!panda` `x!joke`",
+        inline: false,
+      })
+      .addFields({
+        name: "Anime Commands ✨",
+        value: "`x!anime` `x!manga` `x!ranime` `x!qanime`",
+        inline: false,
+      })
+      .addFields({
+        name: "Action Commands 🎬",
+        value:
+          "`x!hug` `x!punch` `x!slap` `x!pat` `x!pout` `x!blush` `x!kiss` `x!stare` `x!angry` `x!cuddle` `x!confused` `x!bite`",
+        inline: false,
+      })
+      .addFields({
+        name: "Image Commands 🗺️",
+        value:
+          "`x!trigger` `x!wanted` `x!shit` `x!spank` `x!affect` `x!invert` `x!gay` `x!blur` `x!hitler` `x!rip` `x!trash` `x!wasted`",
+        inline: false,
+      })
+      .addFields({
+        name: "Info Commands 📜",
+        value: "`x!help` `x!avatar` `x!userinfo` `x!serverinfo`",
+        inline: false,
+      })
       .setFooter("Prefix - x!")
       .setTimestamp();
-    message.channel.send(embed);
+    message.channel.send({ embeds: [embed] });
   },
 };

@@ -50,7 +50,7 @@ module.exports = {
   aliases: "animesearch",
   description: "This command search for anime you typed",
   category: "anime",
-  example: ["!anime @animename"],
+  example: ["x!anime @animename"],
   callback({ message, args }) {
     let member = message.author;
 
@@ -94,7 +94,7 @@ module.exports = {
         )
         .setImage(`${info.results[0].image_url}`)
         .setTimestamp();
-      message.channel.send(embed);
+      message.channel.send({ embeds: embed });
     });
   },
 };

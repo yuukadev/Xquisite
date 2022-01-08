@@ -5,7 +5,7 @@ module.exports = {
   name: "slap",
   description: "this command sends a slapping gif",
   category: "action",
-  example: ["!slap @member"],
+  example: ["x!slap @member"],
   callback({ message }) {
     let member = message.mentions.users.first();
     const imagesSlap = [
@@ -43,7 +43,7 @@ module.exports = {
         .setColor("#FF00A6")
         .setImage(randomImage)
         .setTimestamp();
-      message.channel.send(embed);
+      message.channel.send({ embeds: [embed] });
     } else {
       message.channel.send("❌ | Please specify someone");
     }

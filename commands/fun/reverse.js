@@ -1,23 +1,23 @@
-const Discord = require('discord.js');
+const Discord = require("discord.js");
 
 module.exports = {
-    name: 'reverse',
-    description: "This command reverse a word you typed",
-    category: 'fun',
-    example: ['!reverse @word'],
-    callback({message, args}) {
-        const msg = args.join(" ")
-        let array = msg.split("")
-        let reversedArray = array.reverse()
+  name: "reverse",
+  description: "This command reverse a word you typed",
+  category: "fun",
+  example: ["x!reverse @word"],
+  callback({ message, args }) {
+    const msg = args.join(" ");
+    let array = msg.split("");
+    let reversedArray = array.reverse();
 
-        if(msg) {
-            let embed = new Discord.MessageEmbed()
-            .setTitle('Reversed Word')
-            .setDescription(reversedArray)
-            .setColor('#FF00A6');
-            message.channel.send(embed)
-        } else {
-            message.channel.send('❓ | Give me something to reverse');
-        }
+    if (msg) {
+      let embed = new Discord.MessageEmbed()
+        .setTitle("📇 | Reversed Word")
+        .setDescription(`${reversedArray}`)
+        .setColor("#FF00A6");
+      message.channel.send({ embeds: [embed] });
+    } else {
+      message.channel.send("❓ | Give me something to reverse");
     }
-}
+  },
+};

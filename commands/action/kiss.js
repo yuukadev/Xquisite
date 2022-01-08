@@ -5,7 +5,7 @@ module.exports = {
   name: "kiss",
   description: "this command sends a kissing gif",
   category: "action",
-  example: ["!kiss @member"],
+  example: ["x!kiss @member"],
   callback({ message }) {
     let member = message.mentions.users.first();
     const imagesKiss = [
@@ -34,7 +34,7 @@ module.exports = {
         .setColor("#FF00A6")
         .setImage(randomImage)
         .setTimestamp();
-      message.channel.send(embed);
+      message.channel.send({ embeds: [embed] });
     } else {
       message.channel.send("❌ | Please specify someone");
     }

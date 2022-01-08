@@ -5,7 +5,7 @@ module.exports = {
   name: "quote",
   description: "This command sends you random quote",
   category: "fun",
-  example: ["!quote"],
+  example: ["x!quote"],
   callback: async ({ message }) => {
     try {
       let res = await fetch("https://api.quotable.io/random");
@@ -16,7 +16,7 @@ module.exports = {
         .setColor("#FF00A6")
         .setDescription(random.content);
 
-      message.channel.send(embed);
+      message.channel.send({ embeds: [embed] });
     } catch (err) {
       message.channel.send("there is something wrong :(");
     }

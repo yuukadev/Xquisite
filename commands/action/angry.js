@@ -5,7 +5,7 @@ module.exports = {
   name: "angry",
   description: "this command sends a gif of anger",
   category: "action",
-  example: ["!angry @member"],
+  example: ["x!angry @member"],
   callback({ message }) {
     let member = message.mentions.users.first();
     const imagesAngry = [
@@ -35,7 +35,7 @@ module.exports = {
         .setColor("#FF00A6")
         .setImage(randomImage)
         .setTimestamp();
-      message.channel.send(embed);
+      message.channel.send({ embeds: [embed] });
     } else {
       message.channel.send("❌ | Please specify someone");
     }

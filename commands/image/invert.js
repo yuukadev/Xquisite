@@ -1,11 +1,11 @@
-const Discord = require("discord.js");
+const { MessageAttachment } = require("discord.js");
 const { Canvas } = require("canvacord");
 
 module.exports = {
   name: "invert",
   description: "This command sends inverted color user avatar",
   category: "image",
-  example: ["!invert" || "invert @member"],
+  example: ["x!invert" || "x!invert @member"],
   callback: async ({ message }) => {
     try {
       let member = message.mentions.users.first() || message.author;
@@ -16,11 +16,11 @@ module.exports = {
       });
 
       let image = await Canvas.invert(avatar);
-      let attachment = new Discord.MessageAttachment(image, "image.gif");
+      let attachment = new MessageAttachment(image, "image.gif");
 
-      return message.reply(attachment);
+      message.channel.send({ files: [attachment] });
     } catch (err) {
-      return message.reply(`There was an error ${err}`);
+      return message.reply("There was something wrong :(");
     }
   },
 };

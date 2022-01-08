@@ -5,7 +5,7 @@ module.exports = {
   name: "stare",
   description: "this command sends a staring gif",
   category: "action",
-  example: ["!stare @member"],
+  example: ["x!stare @member"],
   callback({ message }) {
     let member = message.mentions.users.first();
     const imagesStare = [
@@ -32,7 +32,7 @@ module.exports = {
         .setColor("#FF00A6")
         .setImage(randomImage)
         .setTimestamp();
-      message.channel.send(embed);
+      message.channel.send({ embeds: [embed] });
     } else {
       message.channel.send("❌ | Please specify someone");
     }

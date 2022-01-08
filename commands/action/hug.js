@@ -5,7 +5,7 @@ module.exports = {
   name: "hug",
   description: "this command sends a hug gif",
   category: "action",
-  example: ["!hug @member"],
+  example: ["x!hug @member"],
   callback({ message }) {
     let member = message.mentions.users.first();
     const imagesHug = [
@@ -40,7 +40,7 @@ module.exports = {
         .setColor("#FF00A6")
         .setImage(randomImage)
         .setTimestamp();
-      message.channel.send(embed);
+      message.channel.send({ embeds: [embed] });
     } else {
       message.channel.send("❌ | Please specify someone");
     }

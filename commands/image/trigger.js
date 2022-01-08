@@ -1,11 +1,11 @@
-const Discord = require("discord.js");
+const { MessageAttachment } = require("discord.js");
 const canvacord = require("canvacord");
 
 module.exports = {
   name: "trigger",
   description: "This command sends a triggered user's avatar gif",
   category: "image",
-  example: ["!trigger" || "!trigger @member"],
+  example: ["x!trigger" || "x!trigger @member"],
   callback: async ({ message }) => {
     try {
       let member = message.mentions.users.first() || message.author;
@@ -16,11 +16,11 @@ module.exports = {
       });
 
       let image = await canvacord.Canvas.trigger(avatar);
-      let attachment = new Discord.MessageAttachment(image, "triggered.gif");
-      
-      return message.reply(attachment);
+      let attachment = new MessageAttachment(image, "triggered.gif");
+
+      message.channel.send({ files: [attachment] });
     } catch (err) {
-      return message.reply(`There was an error ${err}`);
+      return message.reply("There was something wrong :(");
     }
   },
 };

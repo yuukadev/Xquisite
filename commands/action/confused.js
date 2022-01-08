@@ -5,7 +5,7 @@ module.exports = {
   name: "confused",
   description: "this command sends a confusing gif",
   category: "action",
-  example: ["!confused @member"],
+  example: ["x!confused @member"],
   callback({ message }) {
     let member = message.mentions.users.first();
     const imagesConfused = [
@@ -24,7 +24,7 @@ module.exports = {
         .setColor("#FF00A6")
         .setImage(randomImage)
         .setTimestamp();
-      message.channel.send(embed);
+      message.channel.send({ embeds: [embed] });
     } else {
       message.channel.send("❌ | Please specify someone");
     }

@@ -1,11 +1,11 @@
-const Discord = require("discord.js");
+const { MessageAttachment } = require("discord.js");
 const { Canvas } = require("canvacord");
 
 module.exports = {
   name: "spank",
   description: "With this command you can spank someone",
   category: "image",
-  example: ["!spank @member"],
+  example: ["x!spank @member"],
   callback: async ({ message }) => {
     try {
       let member = message.mentions.users.first();
@@ -28,11 +28,11 @@ module.exports = {
         message.author.displayAvatarURL({ format: "png" }),
         avatar
       );
-      let attachment = new Discord.MessageAttachment(image, "image.gif");
+      let attachment = new MessageAttachment(image, "image.gif");
 
-      return message.reply(attachment);
+      message.channel.send({ files: [attachment] });
     } catch (err) {
-      return message.reply(`There was an error ${err}`);
+      return message.reply("There was something wrong :(");
     }
   },
 };

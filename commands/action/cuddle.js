@@ -5,7 +5,7 @@ module.exports = {
   name: "cuddle",
   description: "this command sends a cuddling gif",
   category: "action",
-  example: ["!cuddle @member"],
+  example: ["x!cuddle @member"],
   callback({ message }) {
     let member = message.mentions.users.first();
     const imagesCuddle = [
@@ -18,7 +18,8 @@ module.exports = {
       "https://media1.tenor.com/images/8f8ba3baeecdf28f3e0fa7d4ce1a8586/tenor.gif?itemid=12668750",
       "https://media1.tenor.com/images/94e6a5bca46ddbf4295a858add086224/tenor.gif?itemid=20714094",
     ];
-    const randomImage = imagesCuddle[Math.floor(Math.random() * imagesCuddle.length)];
+    const randomImage =
+      imagesCuddle[Math.floor(Math.random() * imagesCuddle.length)];
     if (member) {
       let embed = new Discord.MessageEmbed()
         .setTitle(
@@ -27,7 +28,7 @@ module.exports = {
         .setColor("#FF00A6")
         .setImage(randomImage)
         .setTimestamp();
-      message.channel.send(embed);
+      message.channel.send({ embeds: [embed] });
     } else {
       message.channel.send("❌ | Please specify someone");
     }

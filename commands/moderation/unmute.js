@@ -1,6 +1,9 @@
 module.exports = {
+  name: "unmute",
+  description: "This command unmute command",
   category: "moderation",
-  description: "unmute command",
+  permission: ["MANAGE_ROLES"],
+  example: ["x!unmute @member"],
   callback: ({ client, message, args }) => {
     let member = message.mentions.members.first();
     let mutedRole = message.guild.roles.cache.find(

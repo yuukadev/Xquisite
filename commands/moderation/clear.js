@@ -2,9 +2,9 @@ module.exports = {
   name: "clear",
   description: "This command clear's chat",
   category: "moderation",
-  example: ["!clear @number"],
+  example: ["x!clear @number"],
   callback({ message, args }) {
-    const permission = message.member.hasPermission("MANAGE_MESSAGES");
+    const permission = message.member.permissions.has("MANAGE_MESSAGES");
 
     if (!permission) {
       return message.channel.send(

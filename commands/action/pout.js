@@ -5,7 +5,7 @@ module.exports = {
   name: "pout",
   description: "this command sends a pouting gif",
   category: "action",
-  example: ["!pout @member"],
+  example: ["x!pout @member"],
   callback({ message }) {
     let member = message.mentions.users.first();
     const imagesPout = [
@@ -33,7 +33,7 @@ module.exports = {
         .setColor("#FF00A6")
         .setImage(randomImage)
         .setTimestamp();
-      message.channel.send(embed);
+      message.channel.send({ embeds: [embed] });
     } else {
       message.channel.send("❌ | Please specify someone");
     }

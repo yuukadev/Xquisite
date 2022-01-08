@@ -8,7 +8,6 @@ module.exports = (client) => {
     client.on("guildMemberAdd", (member) => {
         const message = `Welcome <@${member.id}> to our server!`; <==== This is a message that bot sends when a user join's a server
 
-  
         const channel = member.guild.channels.cache.get(channelId);
         channel.send(message);
     });

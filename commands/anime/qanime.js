@@ -6,7 +6,7 @@ module.exports = {
   aliases: "quoteanime",
   description: "This command sends you random anime quote",
   category: "anime",
-  example: ["!qanime"],
+  example: ["x!qanime"],
   callback: async ({ message }) => {
     try {
       let res = await fetch("https://animechan.vercel.app/api/random");
@@ -18,8 +18,7 @@ module.exports = {
         )
         .setColor("#FF00A6")
         .setDescription(random.quote);
-
-      message.channel.send(embed);
+      message.channel.send({ embeds: [embed] });
     } catch (err) {
       message.channel.send("there is something wrong :(");
     }

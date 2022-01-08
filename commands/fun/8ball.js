@@ -4,12 +4,8 @@ module.exports = {
   name: "8ball",
   description: "This command play with you 8ball",
   category: "fun",
-  example: ["!8ball @question"],
+  example: ["x!8ball @question"],
   callback({ message, args }) {
-    if (!args[0]) {
-      return message.channel.send("❓ | Please ask a full question");
-    }
-
     let replies = [
       "yes.",
       "Outlook seems good.",
@@ -34,13 +30,17 @@ module.exports = {
       "ask again.. later..",
     ];
 
-    const randomReplies = replies[Math.floor(Math.random() * replies.length)];
+    if (!args[0]) {
+      message.reply("❓ | Please ask a full question");
+    } else {
+      const randomReplies = replies[Math.floor(Math.random() * replies.length)];
 
-    let embed = new Discord.MessageEmbed()
-      .setAuthor(`📜 Answer for ${message.author.username}`)
-      .setDescription(`🎱 ${randomReplies}`)
-      .setColor("#FF00A6");
+      let embed = new Discord.MessageEmbed()
+        .setAuthor(`📜 Answer for ${message.author.username}`)
+        .setDescription(`🎱 ${randomReplies}`)
+        .setColor("#FF00A6");
 
-    message.channel.send(embed);
+      message.channel.send({ embeds: [embed] });
+    }
   },
 };
