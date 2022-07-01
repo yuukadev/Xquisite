@@ -1,21 +1,16 @@
 <img src="logo.jpg">
 
-## ⏳ The bot is currently inactive but will come back!
+# The Bot Is Currently Offline ⏳
+Xquisite is an open-source discord bot made using [Node.js](https://nodejs.dev/) and [discord.js](https://discord.js.org) library it has over 60 commands that includes moderation, action, and much more, a bot is simple so that means everyone can use it, the bot is currently offline because of rework he is getting.
 
-This bot is made purely for fun, the goal of this bot is to improve someone's server experience,it was built using [discord.js](https://discord.js.org/#/)
-
-[Invite Xquisite](https://discord.com/api/oauth2/authorize?client_id=840968738122498070&permissions=8&scope=bot)
-
-[Xquisite Support Server](https://dsc.gg/xquisite-support)
-
-## Usage
+### Usage
 Change the ```.env``` file to put your token
 
 ```
 BOT_TOKEN=Your Token Goes Here
 ```
-## Installation
-Bot is running on [node.js](https://nodejs.org/en/)
+### Installation
+Bot is running on [Node.js](https://nodejs.org/en/)
 
 You need to have :
 
@@ -26,7 +21,7 @@ You need to have :
 * ```@discordjs/opus - npm install @discordjs/opus```
 * ```Python (to support more sites)```
 
-## Packages
+### Packages
 [Nodemon](https://www.npmjs.com/package/nodemon) - ```npm install -g nodemon```
 
 [GOT](https://www.npmjs.com/package/got) - ```npm i got```
@@ -39,7 +34,7 @@ You need to have :
 
 [Distube](https://www.npmjs.com/package/distube) - ```npm i distube```
 
-## Features
+### Features
 These are some of the current commands provided by the bot
 You can always check our [page](https://yuukadev.gitbook.io/xquisite-discord-bot/) for more detailed information.
 
@@ -105,7 +100,7 @@ You can always check our [page](https://yuukadev.gitbook.io/xquisite-discord-bot
 * ```x!serverinfo - Sends information of server```
 * ```x!userinfo - Sends information of user```
 
-# Contributing
+### Contributing
 * Fork the repository
 * Clone your fork: git clone https://github.com/your-username/discordjs-bot.git
 * Create your feature branch: git checkout -b my-new-feature
@@ -113,7 +108,7 @@ You can always check our [page](https://yuukadev.gitbook.io/xquisite-discord-bot
 * Push to the branch: git push origin my-new-feature
 * Submit a pull request
 
-## Social Media
+### Social Media
 [Twitter](https://twitter.com/yuukasuoh)
 
 Discord - Вук#1097
